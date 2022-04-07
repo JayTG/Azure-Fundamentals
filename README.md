@@ -80,6 +80,8 @@ Azure Marketplace helps connect users with Microsoft partners, independent softw
 ### Azure services
 Here's a big-picture view of the available services and features in Azure.
 
+![azure-services-6c41a736](https://user-images.githubusercontent.com/87706066/162206237-aca4aa9d-b71e-47f6-b89c-46f3ae81c3c3.png)
+
 There are many different categories
 
 - Compute
