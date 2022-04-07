@@ -1,6 +1,4 @@
-# Microsoft Azure-Fundamentals
-
-- [Microsoft Azure-Fundamentals](#microsoft-azure-fundamentals)
+# Part 1: Describe core Azure concepts
   - [Part 1: Describe core Azure concepts](#part-1-describe-core-azure-concepts)
     - [What is cloud computing?](#what-is-cloud-computing)
     - [Why is cloud computing typically cheaper to use?](#why-is-cloud-computing-typically-cheaper-to-use)
@@ -39,13 +37,12 @@
     - [Hierarchy of management groups and subscriptions](#hierarchy-of-management-groups-and-subscriptions)
     - [Important facts about management groups](#important-facts-about-management-groups)
 
-## Part 1: Describe core Azure concepts
-### What is cloud computing?
+## What is cloud computing?
 It's the delivery of computing services over the internet, which is otherwise known as the cloud. These services include servers, storage, databases, networking, software, analytics, and intelligence. Cloud computing offers faster innovation, flexible resources, and economies of scale.
 
 ![38-3](https://user-images.githubusercontent.com/87706066/162168457-4450c033-8ae5-4774-b87a-a09e2af114c8.png)
 
-### Why is cloud computing typically cheaper to use?
+## Why is cloud computing typically cheaper to use?
 Cloud computing is the delivery of computing services over the internet by using a pay-as-you-go pricing model. You typically pay only for the cloud services you use, which helps you:
 
 - Lower your operating costs.
@@ -56,7 +53,7 @@ To put it another way, cloud computing may be a way to lease compute power and c
 
 The cloud supplier takes care of keeping up the fundamental framework for you. The cloud empowers you to rapidly unravel your hardest commerce challenges, and bring cutting-edge arrangements to your clients.#
 
-### Why should I move to the cloud?
+## Why should I move to the cloud?
 The cloud helps you move faster and innovate in ways that were once nearly impossible.
 
 In our ever-changing digital world, two trends emerge:
@@ -70,25 +67,25 @@ To power your services and deliver innovative and novel user experiences more qu
 - Speech recognition and other cognitive services that help make your application stand out from the crowd.
 - Analytics services that deliver telemetry data from your software and devices.
 
-### What is Azure?
+## What is Azure?
 Azure is a continually expanding set of cloud services that help your organization meet your current and future business challenges. Azure gives you the freedom to build, manage, and deploy applications on a massive global network using your favorite tools and frameworks.
 
 ![10-reasons-why-choose-azure-for-your-enterprise](https://user-images.githubusercontent.com/87706066/162172047-9300ba7f-9318-4237-910d-9c34d21860f0.png)
 
-### What does Azure offer?
+## What does Azure offer?
 
 - **Be ready for the future:** Continuous innovation from Microsoft supports your development today and your product visions for tomorrow.
 - **Build on your terms:** You have choices. With a commitment to open source, and support for all languages and frameworks, you can build how you want and deploy where you want to.
 - **Operate hybrid seamlessly:** On-premises, in the cloud, and at the edge--we'll meet you where you are. Integrate and manage your environments with tools and services designed for a hybrid cloud solution.
 - **Trust your cloud:** Get security from the ground up, backed by a team of experts, and proactive compliance trusted by enterprises, governments, and startups.
 
-### What can I do with Azure?
+## What can I do with Azure?
 Azure provides more than 100 services that enable you to do everything from running your existing applications on virtual machines, to exploring new software paradigms, such as intelligent bots and mixed reality.  Many teams start exploring the cloud by moving their existing applications to virtual machines that run in Azure. 
 
-### How does Azure work?
+## How does Azure work?
 Azure is a public and private platform that helps users to build, deploy and manage their applications. A technology known as virtualization which seprates the coupling between a computer's hardware and operating system using a abstraction layer called a hypervisor. The hypervisor emulates all the functions of a computer in a virtual machine. It can run multiple virtual machines at the same time and they can run any compatiable OS such as Windows and Linux. Each server contains and hypervisor. A network switch provides connectivity to all those servers
 
-### What is the Azure portal?
+## What is the Azure portal?
 
 The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription by using a graphical user interface. You can:
 
@@ -100,10 +97,10 @@ The Azure portal is designed for resiliency and continuous availability. It main
 
 The Azure portal is designed for resiliency and continuous availability. It maintains a presence in every Azure datacenter. This configuration makes the Azure portal resilient to individual datacenter failures and avoids network slowdowns by being close to users. The Azure portal updates continuously and requires no downtime for maintenance activities.
 
-### What is Azure Marketplace?
+## What is Azure Marketplace?
 Azure Marketplace helps connect users with Microsoft partners, independent software vendors, and startups that are offering their solutions and services, which are optimized to run on Azure. Azure Marketplace customers can find, try, purchase, and provision applications and services from hundreds of leading service providers. All solutions and services are certified to run on Azure.
 
-### Azure services
+## Azure services
 Here's a big-picture view of the available services and features in Azure.
 
 ![azure-services-6c41a736](https://user-images.githubusercontent.com/87706066/162206237-aca4aa9d-b71e-47f6-b89c-46f3ae81c3c3.png)
@@ -132,24 +129,24 @@ There are many different categories
 > DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.
 
 --- 
-### Cloud model comparison
+## Cloud model comparison
 
-#### Public cloud
+### Public cloud
 - No capital expenditures to scale up.
 - Applications can be quickly provisioned and deprovisioned.
 - Organizations pay only for what they use.
 
-#### Private cloud
+### Private cloud
 - Hardware must be purchased for start-up and maintenance.
 - Organizations have complete control over resources and security.
 - Organizations are responsible for hardware maintenance and updates.
 
-#### Hybrid cloud
+### Hybrid cloud
 - Provides the most flexibility.
 - Organizations determine where to run their applications.
 - Organizations control security, compliance, or legal requirements.
 
-### What are some cloud computing advantages?
+## What are some cloud computing advantages?
 - **High availability:** Depending on the service-level agreement (SLA) that you choose, your cloud-based apps can provide a continuous user experience with no apparent downtime, even when things go wrong.
 - **Scalability:** Apps in the cloud can scale vertically and horizontally:  
 > - Scale vertically to increase compute capacity by adding RAM or CPUs to a virtual machine. 
@@ -160,13 +157,13 @@ There are many different categories
 - **Geo-distribution:** You can deploy apps and data to regional datacenters around the globe, thereby ensuring that your customers always have the best performance in their region.
 - **Disaster recovery:** By taking advantage of cloud-based backup services, data replication, and geo-distribution, you can deploy your apps with the confidence that comes from knowing that your data is safe in the event of disaster.
 
-### Capital expenses vs. operating expenses
+## Capital expenses vs. operating expenses
 There are two different types of expenses that you should consider:
 
 - **Capital Expenditure (CapEx)** is the up-front spending of money on physical infrastructure, and then deducting that up-front expense over time. The up-front cost from CapEx has a value that reduces over time.
 - **Operational Expenditure (OpEx)** is spending money on services or products now, and being billed for them now. You can deduct this expense in the same year you spend it. There is no up-front cost, as you pay for a service or product as you use it.
 
-### Cloud computing is a consumption-based model
+## Cloud computing is a consumption-based model
 Cloud service providers operate on a consumption-based model, which means that end users only pay for the resources that they use. Whatever they use is what they pay for.
 
 A consumption-based model has many benefits, including:
@@ -183,17 +180,17 @@ The following illustration demonstrates the services that might run in each of t
 
 ![iaas-paas-saas-575a09e9](https://user-images.githubusercontent.com/87706066/162212397-4fd8a434-8502-4715-a327-726486ccf7e7.png)
 
-#### IaaS
+### IaaS
 IaaS is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application. Instead of buying hardware, with IaaS, you rent it.
 > Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Flexibility
 
-#### PaaS
+### PaaS
 PaaS provides the same benefits and considerations as IaaS, but there are some additional benefits to be aware of.
 > Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Productivity
 >
 > Disadvantage:  Platform limitations
 
-#### SaaS
+### SaaS
 SaaS is software that's centrally hosted and managed for you and your users or customers. Usually one version of the application is used for all customers, and it's licensed through a monthly or annual subscription.
 
 SaaS provides the same benefits as IaaS, but again there are some additional benefits to be aware of too.
@@ -205,12 +202,12 @@ The following chart illustrates the various levels of responsibility between a c
 
 ![shared-responsibility-76efbc1e](https://user-images.githubusercontent.com/87706066/162212329-640b373a-eff2-4ec9-ad78-7bc98136ccd5.png)
 
-### What is serverless computing?
+## What is serverless computing?
 
 Like PaaS, serverless computing enables developers to build applications faster by eliminating the need for them to manage infrastructure. With serverless applications, the cloud service provider automatically provisions, scales, and manages the infrastructure required to run the code. Serverless architectures are highly scalable and event-driven, only using resources when a specific function or trigger occurs.
 
 ---
-### Azure Archcitecture 
+## Azure Archcitecture 
 
 The following image shows the top-down hierarchy of organization for these levels.
 
@@ -221,16 +218,16 @@ The following image shows the top-down hierarchy of organization for these level
 - **Subscriptions:** A subscription groups together user accounts and the resources that have been created by those user accounts. For each subscription, there are limits or quotas on the amount of resources that you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.
 - **Management groups:** These groups help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 
-### Azure Reigions
+## Azure Reigions
 A region is a geographical area on the planet that contains at least one but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.
 
 When you deploy a resource in Azure, you'll often need to choose the region where you want your resource deployed.
 
-### Why are regions important?
+## Why are regions important?
 
 Azure has more global regions than any other cloud provider. These regions give you the flexibility to bring applications closer to your users no matter where they are. Global regions provide better scalability and redundancy. They also preserve data residency for your services.
 
-### Special Azure regions
+## Special Azure regions
 
 Azure has specialized regions that you might want to use when you build out your applications for compliance or legal purposes. A few examples include:
 
@@ -239,17 +236,17 @@ Azure has specialized regions that you might want to use when you build out your
 
 Regions are what you use to identify the location for your resources. There are two other terms you should also be aware of: geographies and availability zones.
 
-### Azure availability zones
+## Azure availability zones
 
 You want to ensure your services and data are redundant so you can protect your information in case of failure. When you host your infrastructure, setting up your own redundancy requires that you create duplicate hardware environments. Azure can help make your app highly available through availability zones.
 
-### What is an availability zone?
+## What is an availability zone?
 Availability zones are physically separate datacenters within an Azure region. Each availability zone is made up of one or more datacenters equipped with independent power, cooling, and networking. An availability zone is set up to be an isolation boundary. If one zone goes down, the other continues working. Availability zones are connected through high-speed, private fiber-optic networks.
 
-### Azure region pairs
+## Azure region pairs
 Availability zones are created by using one or more datacenters. There's a minimum of three zones within a single region. It's possible that a large disaster could cause an outage big enough to affect even two datacenters. That's why Azure also creates region pairs.
 
-### What is a region pair?
+## What is a region pair?
 
 Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. This approach allows for the replication of resources (such as VM storage) across a geography that helps reduce the likelihood of interruptions because of events such as natural disasters, civil unrest, power outages, or physical network outages that affect both regions at once. If a region in a pair was affected by a natural disaster, for instance, services would automatically failover to the other region in its region pair.
 
@@ -258,12 +255,12 @@ Additional advantages of region pairs:
 - Planned Azure updates are rolled out to paired regions one region at a time to minimize downtime and risk of application outage.
 - Data continues to reside within the same geography as its pair (except for Brazil South) for tax- and law-enforcement jurisdiction purposes.
 
-### Azure Resource Manager
+## Azure Resource Manager
 Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account. You use management features like access control, locks, and tags to secure and organize your resources after deployment.
 
 When a user sends a request from any of the Azure tools, APIs, or SDKs, Resource Manager receives the request. It authenticates and authorizes the request. Resource Manager sends the request to the Azure service, which takes the requested action. Because all requests are handled through the same API, you see consistent results and capabilities in all the different tools.
 
-### The benefits of using Resource Manager
+## The benefits of using Resource Manager
 
 With Resource Manager, you can:
 - Manage your infrastructure through declarative templates rather than scripts. A Resource Manager template is a JSON file that defines what you want to deploy to Azure.
@@ -274,24 +271,24 @@ With Resource Manager, you can:
 - Apply tags to resources to logically organize all the resources in your subscription.
 - Clarify your organization's billing by viewing costs for a group of resources that share the same tag.
 
-### Azure subscriptions
+## Azure subscriptions
 Using Azure requires an Azure subscription. A subscription provides you with authenticated and authorized access to Azure products and services. It also allows you to provision resources. An Azure subscription is a logical unit of Azure services that links to an Azure account, which is an identity in Azure Active Directory (Azure AD) or in a directory that Azure AD trusts.
 
 An account can have one subscription or multiple subscriptions that have different billing models and to which you apply different access-management policies. You can use Azure subscriptions to define boundaries around Azure products, services, and resources. There are two types of subscription boundaries that you can use:
 - **Billing boundary:** This subscription type determines how an Azure account is billed for using Azure. You can create multiple subscriptions for different types of billing requirements. Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs.
 - **Access control boundary:** Azure applies access-management policies at the subscription level, and you can create separate subscriptions to reflect different organizational structures. An example is that within a business, you have different departments to which you apply distinct Azure subscription policies. This billing model allows you to manage and control access to the resources that users provision with specific subscriptions.
 
-### Azure management groups
+## Azure management groups
 f your organization has many subscriptions, you might need a way to efficiently manage access, policies, and compliance for those subscriptions. Azure management groups provide a level of scope above subscriptions. You organize subscriptions into containers called management groups and apply your governance conditions to the management groups. All subscriptions within a management group automatically inherit the conditions applied to the management group. Management groups give you enterprise-grade management at a large scale no matter what type of subscriptions you might have. All subscriptions within a single management group must trust the same Azure AD tenant.
 
 For example, you can apply policies to a management group that limits the regions available for VM creation. This policy would be applied to all management groups, subscriptions, and resources under that management group by only allowing VMs to be created in that region.
 
-### Hierarchy of management groups and subscriptions
+## Hierarchy of management groups and subscriptions
 You can build a flexible structure of management groups and subscriptions to organize your resources into a hierarchy for unified policy and access management. The following diagram shows an example of creating a hierarchy for governance by using management groups.
 
 ![management-groups-and-subscriptions-bba71896](https://user-images.githubusercontent.com/87706066/162216232-b5ef568b-0fc0-4160-b374-047750f1ca8c.png)
 
-### Important facts about management groups
+## Important facts about management groups
 - 10,000 management groups can be supported in a single directory.
 - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
 - Each management group and subscription can support only one parent.
