@@ -1,5 +1,15 @@
 # Microsoft Azure-Fundamentals
 
+- [Microsoft Azure-Fundamentals](#microsoft-azure-fundamentals)
+  - [Part 1: Describe core Azure concepts](#part-1-describe-core-azure-concepts)
+    - [What is cloud computing?](#what-is-cloud-computing)
+    - [Why is cloud computing typically cheaper to use?](#why-is-cloud-computing-typically-cheaper-to-use)
+    - [Why should I move to the cloud?](#why-should-i-move-to-the-cloud)
+    - [What is Azure?](#what-is-azure)
+    - [What does Azure offer?](#what-does-azure-offer)
+    - [What can I do with Azure?](#what-can-i-do-with-azure)
+    - [How does Azure work?](#how-does-azure-work)
+
 ## Part 1: Describe core Azure concepts
 ### What is cloud computing?
 It's the delivery of computing services over the internet, which is otherwise known as the cloud. These services include servers, storage, databases, networking, software, analytics, and intelligence. Cloud computing offers faster innovation, flexible resources, and economies of scale.
