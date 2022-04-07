@@ -12,6 +12,19 @@
     - [What is the Azure portal?](#what-is-the-azure-portal)
     - [What is Azure Marketplace?](#what-is-azure-marketplace)
     - [Azure services](#azure-services)
+  - [> DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.](#-devops-brings-together-people-processes-and-technology-by-automating-software-delivery-to-provide-continuous-value-to-your-users-with-azure-devops-you-can-create-build-and-release-pipelines-that-provide-continuous-integration-delivery-and-deployment-for-your-applications-you-can-integrate-repositories-and-application-tests-perform-application-monitoring-and-work-with-build-artifacts-you-can-also-work-with-and-backlog-items-for-tracking-automate-infrastructure-deployment-and-integrate-a-range-of-third-party-tools-and-services-such-as-jenkins-and-chef-all-of-these-functions-and-many-more-are-closely-integrated-with-azure-to-allow-for-consistent-repeatable-deployments-for-your-applications-to-provide-streamlined-build-and-release-processes)
+    - [Cloud model comparison](#cloud-model-comparison)
+      - [Public cloud](#public-cloud)
+      - [Private cloud](#private-cloud)
+      - [Hybrid cloud](#hybrid-cloud)
+    - [What are some cloud computing advantages?](#what-are-some-cloud-computing-advantages)
+    - [Capital expenses vs. operating expenses](#capital-expenses-vs-operating-expenses)
+    - [Cloud computing is a consumption-based model](#cloud-computing-is-a-consumption-based-model)
+    - [What are cloud service models?](#what-are-cloud-service-models)
+      - [IaaS](#iaas)
+      - [PaaS](#paas)
+      - [SaaS](#saas)
+    - [What is serverless computing?](#what-is-serverless-computing)
 
 ## Part 1: Describe core Azure concepts
 ### What is cloud computing?
@@ -104,3 +117,78 @@ There are many different categories
 > AI, in the context of cloud computing, is based around a broad range of services, the core of which is machine learning. Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. Using machine learning, computers learn without being explicitly programmed.
 - DevOps
 > DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.
+---
+### Cloud model comparison
+
+#### Public cloud
+- No capital expenditures to scale up.
+- Applications can be quickly provisioned and deprovisioned.
+- Organizations pay only for what they use.
+
+#### Private cloud
+- Hardware must be purchased for start-up and maintenance.
+- Organizations have complete control over resources and security.
+- Organizations are responsible for hardware maintenance and updates.
+
+#### Hybrid cloud
+- Provides the most flexibility.
+- Organizations determine where to run their applications.
+- Organizations control security, compliance, or legal requirements.
+
+### What are some cloud computing advantages?
+- **High availability:** Depending on the service-level agreement (SLA) that you choose, your cloud-based apps can provide a continuous user experience with no apparent downtime, even when things go wrong.
+- Scalability: Apps in the cloud can scale vertically and horizontally:  
+> - Scale vertically to increase compute capacity by adding RAM or CPUs to a virtual machine. 
+> - Scaling horizontally increases compute capacity by adding instances of resources, such as adding VMs to the configuration.
+- **Elasticity:** You can configure cloud-based apps to take advantage of autoscaling, so your apps always have the resources they need.
+- **Agility:** Deploy and configure cloud-based resources quickly as your app requirements change.
+
+- **Geo-distribution:** You can deploy apps and data to regional datacenters around the globe, thereby ensuring that your customers always have the best performance in their region.
+- **Disaster recovery:** By taking advantage of cloud-based backup services, data replication, and geo-distribution, you can deploy your apps with the confidence that comes from knowing that your data is safe in the event of disaster.
+
+### Capital expenses vs. operating expenses
+There are two different types of expenses that you should consider:
+
+- **Capital Expenditure (CapEx)** is the up-front spending of money on physical infrastructure, and then deducting that up-front expense over time. The up-front cost from CapEx has a value that reduces over time.
+- **Operational Expenditure (OpEx)** is spending money on services or products now, and being billed for them now. You can deduct this expense in the same year you spend it. There is no up-front cost, as you pay for a service or product as you use it.
+
+### Cloud computing is a consumption-based model
+Cloud service providers operate on a consumption-based model, which means that end users only pay for the resources that they use. Whatever they use is what they pay for.
+
+A consumption-based model has many benefits, including:
+
+- No upfront costs.
+- No need to purchase and manage costly infrastructure that users might not use to its fullest.
+- The ability to pay for additional resources when they are needed.
+- The ability to stop paying for resources that are no longer needed.
+
+### What are cloud service models?
+If you've been around cloud computing for a while, you've probably seen the PaaS, IaaS, and SaaS acronyms for the different cloud service models. These models define the different levels of shared responsibility that a cloud provider and cloud tenant are responsible for.
+
+The following illustration demonstrates the services that might run in each of the cloud service models.
+
+#### IaaS
+IaaS is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application. Instead of buying hardware, with IaaS, you rent it.
+> Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Flexibility
+
+#### PaaS
+PaaS provides the same benefits and considerations as IaaS, but there are some additional benefits to be aware of.
+> Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Productivity
+>
+> Disadvantage:  Platform limitations
+
+#### SaaS
+SaaS is software that's centrally hosted and managed for you and your users or customers. Usually one version of the application is used for all customers, and it's licensed through a monthly or annual subscription.
+
+SaaS provides the same benefits as IaaS, but again there are some additional benefits to be aware of too.
+> Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Flexibility
+> 
+> Disadvantage:  Software limitations
+
+The following chart illustrates the various levels of responsibility between a cloud provider and a cloud tenant
+
+### What is serverless computing?
+
+Like PaaS, serverless computing enables developers to build applications faster by eliminating the need for them to manage infrastructure. With serverless applications, the cloud service provider automatically provisions, scales, and manages the infrastructure required to run the code. Serverless architectures are highly scalable and event-driven, only using resources when a specific function or trigger occurs.
+
+
