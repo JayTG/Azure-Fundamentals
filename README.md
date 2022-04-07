@@ -136,7 +136,7 @@ There are many different categories
 
 ### What are some cloud computing advantages?
 - **High availability:** Depending on the service-level agreement (SLA) that you choose, your cloud-based apps can provide a continuous user experience with no apparent downtime, even when things go wrong.
-- Scalability: Apps in the cloud can scale vertically and horizontally:  
+- **Scalability:** Apps in the cloud can scale vertically and horizontally:  
 > - Scale vertically to increase compute capacity by adding RAM or CPUs to a virtual machine. 
 > - Scaling horizontally increases compute capacity by adding instances of resources, such as adding VMs to the configuration.
 - **Elasticity:** You can configure cloud-based apps to take advantage of autoscaling, so your apps always have the resources they need.
