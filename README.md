@@ -166,6 +166,8 @@ If you've been around cloud computing for a while, you've probably seen the PaaS
 
 The following illustration demonstrates the services that might run in each of the cloud service models.
 
+![iaas-paas-saas-575a09e9](https://user-images.githubusercontent.com/87706066/162212397-4fd8a434-8502-4715-a327-726486ccf7e7.png)
+
 #### IaaS
 IaaS is the most flexible category of cloud services. It aims to give you complete control over the hardware that runs your application. Instead of buying hardware, with IaaS, you rent it.
 > Advantages: No CapEx, Agility, Consumption-based model, low skill requirement, Cloud benefits, Flexibility
@@ -185,6 +187,8 @@ SaaS provides the same benefits as IaaS, but again there are some additional ben
 > Disadvantage:  Software limitations
 
 The following chart illustrates the various levels of responsibility between a cloud provider and a cloud tenant
+
+![shared-responsibility-76efbc1e](https://user-images.githubusercontent.com/87706066/162212329-640b373a-eff2-4ec9-ad78-7bc98136ccd5.png)
 
 ### What is serverless computing?
 
