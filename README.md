@@ -289,7 +289,7 @@ For example, you can apply policies to a management group that limits the region
 ### Hierarchy of management groups and subscriptions
 You can build a flexible structure of management groups and subscriptions to organize your resources into a hierarchy for unified policy and access management. The following diagram shows an example of creating a hierarchy for governance by using management groups.
 
-
+![management-groups-and-subscriptions-bba71896](https://user-images.githubusercontent.com/87706066/162216232-b5ef568b-0fc0-4160-b374-047750f1ca8c.png)
 
 ### Important facts about management groups
 - 10,000 management groups can be supported in a single directory.
