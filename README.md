@@ -25,6 +25,19 @@
       - [SaaS](#saas)
     - [What is serverless computing?](#what-is-serverless-computing)
     - [Azure Archcitecture](#azure-archcitecture)
+    - [Azure Reigions](#azure-reigions)
+    - [Why are regions important?](#why-are-regions-important)
+    - [Special Azure regions](#special-azure-regions)
+    - [Azure availability zones](#azure-availability-zones)
+    - [What is an availability zone?](#what-is-an-availability-zone)
+    - [Azure region pairs](#azure-region-pairs)
+    - [What is a region pair?](#what-is-a-region-pair)
+    - [Azure Resource Manager](#azure-resource-manager)
+    - [The benefits of using Resource Manager](#the-benefits-of-using-resource-manager)
+    - [Azure subscriptions](#azure-subscriptions)
+    - [Azure management groups](#azure-management-groups)
+    - [Hierarchy of management groups and subscriptions](#hierarchy-of-management-groups-and-subscriptions)
+    - [Important facts about management groups](#important-facts-about-management-groups)
 
 ## Part 1: Describe core Azure concepts
 ### What is cloud computing?
@@ -118,6 +131,7 @@ There are many different categories
 - DevOps
 > DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.
 
+--- 
 ### Cloud model comparison
 
 #### Public cloud
@@ -195,6 +209,7 @@ The following chart illustrates the various levels of responsibility between a c
 
 Like PaaS, serverless computing enables developers to build applications faster by eliminating the need for them to manage infrastructure. With serverless applications, the cloud service provider automatically provisions, scales, and manages the infrastructure required to run the code. Serverless architectures are highly scalable and event-driven, only using resources when a specific function or trigger occurs.
 
+---
 ### Azure Archcitecture 
 
 The following image shows the top-down hierarchy of organization for these levels.
@@ -206,5 +221,80 @@ The following image shows the top-down hierarchy of organization for these level
 - **Subscriptions:** A subscription groups together user accounts and the resources that have been created by those user accounts. For each subscription, there are limits or quotas on the amount of resources that you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.
 - **Management groups:** These groups help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 
+### Azure Reigions
+A region is a geographical area on the planet that contains at least one but potentially multiple datacenters that are nearby and networked together with a low-latency network. Azure intelligently assigns and controls the resources within each region to ensure workloads are appropriately balanced.
 
+When you deploy a resource in Azure, you'll often need to choose the region where you want your resource deployed.
+
+### Why are regions important?
+
+Azure has more global regions than any other cloud provider. These regions give you the flexibility to bring applications closer to your users no matter where they are. Global regions provide better scalability and redundancy. They also preserve data residency for your services.
+
+### Special Azure regions
+
+Azure has specialized regions that you might want to use when you build out your applications for compliance or legal purposes. A few examples include:
+
+- **US DoD Central, US Gov Virginia, US Gov Iowa and more:** These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
+- **China East, China North, and more:** These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
+
+Regions are what you use to identify the location for your resources. There are two other terms you should also be aware of: geographies and availability zones.
+
+### Azure availability zones
+
+You want to ensure your services and data are redundant so you can protect your information in case of failure. When you host your infrastructure, setting up your own redundancy requires that you create duplicate hardware environments. Azure can help make your app highly available through availability zones.
+
+### What is an availability zone?
+Availability zones are physically separate datacenters within an Azure region. Each availability zone is made up of one or more datacenters equipped with independent power, cooling, and networking. An availability zone is set up to be an isolation boundary. If one zone goes down, the other continues working. Availability zones are connected through high-speed, private fiber-optic networks.
+
+### Azure region pairs
+Availability zones are created by using one or more datacenters. There's a minimum of three zones within a single region. It's possible that a large disaster could cause an outage big enough to affect even two datacenters. That's why Azure also creates region pairs.
+
+### What is a region pair?
+
+Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. This approach allows for the replication of resources (such as VM storage) across a geography that helps reduce the likelihood of interruptions because of events such as natural disasters, civil unrest, power outages, or physical network outages that affect both regions at once. If a region in a pair was affected by a natural disaster, for instance, services would automatically failover to the other region in its region pair.
+
+Additional advantages of region pairs:
+- If an extensive Azure outage occurs, one region out of every pair is prioritized to make sure at least one is restored as quickly as possible for applications hosted in that region pair.
+- Planned Azure updates are rolled out to paired regions one region at a time to minimize downtime and risk of application outage.
+- Data continues to reside within the same geography as its pair (except for Brazil South) for tax- and law-enforcement jurisdiction purposes.
+
+### Azure Resource Manager
+Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account. You use management features like access control, locks, and tags to secure and organize your resources after deployment.
+
+When a user sends a request from any of the Azure tools, APIs, or SDKs, Resource Manager receives the request. It authenticates and authorizes the request. Resource Manager sends the request to the Azure service, which takes the requested action. Because all requests are handled through the same API, you see consistent results and capabilities in all the different tools.
+
+### The benefits of using Resource Manager
+
+With Resource Manager, you can:
+- Manage your infrastructure through declarative templates rather than scripts. A Resource Manager template is a JSON file that defines what you want to deploy to Azure.
+- Deploy, manage, and monitor all the resources for your solution as a group, rather than handling these resources individually.
+- Redeploy your solution throughout the development life cycle and have confidence your resources are deployed in a consistent state.
+- Define the dependencies between resources so they're deployed in the correct order.
+- Apply access control to all services because RBAC is natively integrated into the management platform.
+- Apply tags to resources to logically organize all the resources in your subscription.
+- Clarify your organization's billing by viewing costs for a group of resources that share the same tag.
+
+### Azure subscriptions
+Using Azure requires an Azure subscription. A subscription provides you with authenticated and authorized access to Azure products and services. It also allows you to provision resources. An Azure subscription is a logical unit of Azure services that links to an Azure account, which is an identity in Azure Active Directory (Azure AD) or in a directory that Azure AD trusts.
+
+An account can have one subscription or multiple subscriptions that have different billing models and to which you apply different access-management policies. You can use Azure subscriptions to define boundaries around Azure products, services, and resources. There are two types of subscription boundaries that you can use:
+- **Billing boundary:** This subscription type determines how an Azure account is billed for using Azure. You can create multiple subscriptions for different types of billing requirements. Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs.
+- **Access control boundary:** Azure applies access-management policies at the subscription level, and you can create separate subscriptions to reflect different organizational structures. An example is that within a business, you have different departments to which you apply distinct Azure subscription policies. This billing model allows you to manage and control access to the resources that users provision with specific subscriptions.
+
+### Azure management groups
+f your organization has many subscriptions, you might need a way to efficiently manage access, policies, and compliance for those subscriptions. Azure management groups provide a level of scope above subscriptions. You organize subscriptions into containers called management groups and apply your governance conditions to the management groups. All subscriptions within a management group automatically inherit the conditions applied to the management group. Management groups give you enterprise-grade management at a large scale no matter what type of subscriptions you might have. All subscriptions within a single management group must trust the same Azure AD tenant.
+
+For example, you can apply policies to a management group that limits the regions available for VM creation. This policy would be applied to all management groups, subscriptions, and resources under that management group by only allowing VMs to be created in that region.
+
+### Hierarchy of management groups and subscriptions
+You can build a flexible structure of management groups and subscriptions to organize your resources into a hierarchy for unified policy and access management. The following diagram shows an example of creating a hierarchy for governance by using management groups.
+
+
+
+### Important facts about management groups
+- 10,000 management groups can be supported in a single directory.
+- A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
+- Each management group and subscription can support only one parent.
+- Each management group can have many children.
+- All subscriptions and management groups are within a single hierarchy in each directory.
 
