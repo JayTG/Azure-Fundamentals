@@ -12,7 +12,6 @@
     - [What is the Azure portal?](#what-is-the-azure-portal)
     - [What is Azure Marketplace?](#what-is-azure-marketplace)
     - [Azure services](#azure-services)
-  - [> DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.](#-devops-brings-together-people-processes-and-technology-by-automating-software-delivery-to-provide-continuous-value-to-your-users-with-azure-devops-you-can-create-build-and-release-pipelines-that-provide-continuous-integration-delivery-and-deployment-for-your-applications-you-can-integrate-repositories-and-application-tests-perform-application-monitoring-and-work-with-build-artifacts-you-can-also-work-with-and-backlog-items-for-tracking-automate-infrastructure-deployment-and-integrate-a-range-of-third-party-tools-and-services-such-as-jenkins-and-chef-all-of-these-functions-and-many-more-are-closely-integrated-with-azure-to-allow-for-consistent-repeatable-deployments-for-your-applications-to-provide-streamlined-build-and-release-processes)
     - [Cloud model comparison](#cloud-model-comparison)
       - [Public cloud](#public-cloud)
       - [Private cloud](#private-cloud)
@@ -117,7 +116,7 @@ There are many different categories
 > AI, in the context of cloud computing, is based around a broad range of services, the core of which is machine learning. Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. Using machine learning, computers learn without being explicitly programmed.
 - DevOps
 > DevOps brings together people, processes, and technology by automating software delivery to provide continuous value to your users. With Azure DevOps, you can create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment, and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.
----
+
 ### Cloud model comparison
 
 #### Public cloud
