@@ -101,6 +101,7 @@
   - [Security considerations](#security-considerations)
   - [Disk storage fundamentals](#disk-storage-fundamentals)
   - [Azure Blob storage fundamentals](#azure-blob-storage-fundamentals)
+  - [Azure Files fundamentals](#azure-files-fundamentals)
 
 # Part 1: Describe core Azure concepts
   
@@ -755,4 +756,14 @@ Blob Storage is ideal for:
 You store blobs in containers, which helps you organize your blobs depending on your business needs.
 
 The following diagram illustrates how you might use Azure accounts, containers, and blobs.
+
+## Azure Files fundamentals
+Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block and Network File System protocols. Applications running in Azure virtual machines or cloud services can mount a file storage share to access file data, just as a desktop application would mount a typical SMB share. Typical usage scenarios would be to share files anywhere in the world, diagnostic data, or application data sharing.
+
+Use Azure Files for the following situations:
+- Many on-premises applications use file shares. Azure Files makes it easier to migrate those applications that share data to Azure. If you mount the Azure file share to the same drive letter that the on-premises application uses, the part of your application that accesses the file share should work with minimal changes, if any.
+- Store configuration files on a file share and access them from multiple VMs. Tools and utilities used by multiple developers in a group can be stored on a file share, ensuring that everybody can find them, and that they use the same version.
+- Write data to a file share, and process or analyze the data later. For example, you might want to do this with diagnostic logs, metrics, and crash dumps.
+
+The following illustration shows Azure Files being used to share data between two geographical locations. Azure Files ensures the data is encrypted at rest, and the SMB protocol ensures the data is encrypted in transit.
 
