@@ -56,6 +56,24 @@
   - [Azure Functions](#azure-functions)
   - [Azure Logic Apps](#azure-logic-apps)
   - [Functions vs. Logic Apps](#functions-vs-logic-apps)
+  - [What is Azure Virtual Desktop?](#what-is-azure-virtual-desktop)
+    - [Provide the best user experience](#provide-the-best-user-experience)
+    - [Enhance security](#enhance-security)
+  - [What are some key features of Azure Virtual Desktop?](#what-are-some-key-features-of-azure-virtual-desktop)
+    - [Simplified management](#simplified-management)
+    - [Performance management](#performance-management)
+    - [Multi-session Windows 10 deployment](#multi-session-windows-10-deployment)
+  - [How can you reduce costs with Azure Virtual Desktop?](#how-can-you-reduce-costs-with-azure-virtual-desktop)
+    - [Bring your own licenses](#bring-your-own-licenses)
+    - [Save on compute costs](#save-on-compute-costs)
+  - [What is Azure virtual networking?](#what-is-azure-virtual-networking)
+  - [Isolation and segmentation](#isolation-and-segmentation)
+  - [Internet communications](#internet-communications)
+  - [Communicate between Azure resources](#communicate-between-azure-resources)
+  - [Communicate with on-premises resources](#communicate-with-on-premises-resources)
+  - [Route network traffic](#route-network-traffic)
+  - [Filter network traffic](#filter-network-traffic)
+  - [Connect virtual networks](#connect-virtual-networks)
 
 # Part 1: Describe core Azure concepts
   
@@ -451,3 +469,86 @@ Functions and Logic Apps can both create complex orchestrations. An orchestratio
 - With Logic Apps, you use a GUI to define the actions and how they relate to one another.
 
 ![Screenshot 2022-04-08 110018](https://user-images.githubusercontent.com/87706066/162414583-a79d2338-ba36-41eb-88e4-14c467d02386.png)
+
+## What is Azure Virtual Desktop?
+Azure Virtual Desktop is a desktop and application virtualization service that runs on the cloud. It enables your users to use a cloud-hosted version of Windows from any location. Azure Virtual Desktop works across devices like Windows, Mac, iOS, Android, and Linux. It works with apps that you can use to access remote desktops and apps. You can also use most modern browsers to access Azure Virtual Desktop-hosted experiences.
+
+### Provide the best user experience
+Users have the freedom to connect to Azure Virtual Desktop with any device over the internet. They use an Azure Virtual Desktop client to connect to published Windows desktops and applications. This client can be a native application on the device or an Azure Virtual Desktop HTML5 web client. User sign-in to Azure Virtual Desktop is fast because user profiles are containerized using FSLogix.
+
+During login, the user profile container is dynamically added to the computing environment. The user profile is immediately available and looks exactly like a local user profile in the system.
+
+### Enhance security
+Azure Virtual Desktop provides centralized security management for users' desktops with Azure Active Directory. With Azure Virtual Desktop, data and applications are isolated from the local hardware. Azure Virtual Desktop instead of running them on a remote server. The risk of confidential data being saved on personal devices is minimized.
+
+This type of connection is more secure than the Remote Desktop Protocol.
+
+## What are some key features of Azure Virtual Desktop?
+
+### Simplified management
+Azure Virtual Desktop is an Azure service, so it will be familiar to Azure administrators. You use Azure AD and RBACs to manage access to resources. With Azure, you also get tools to automate VM deployments, manage VM updates, and provide disaster recovery. As with other Azure services, Azure Virtual Desktop uses Azure Monitor for monitoring and alerts. This standardization lets admins identify issues through a single interface.
+
+### Performance management
+Azure Virtual Desktop gives you options to load balance users on your VM host pools. Host pools are collections of VMs with the same configuration assigned to multiple users. For the best performance, you can configure load balancing to occur as users sign in (breadth mode). With breadth mode, users are sequentially allocated across the host pool for your workload. To save costs, you can configure your VMs for depth mode load balancing where users are fully allocated on one VM before moving to the next. Azure Virtual Desktop provides tools to automatically provision additional VMs when incoming demand exceeds a specified threshold.
+
+### Multi-session Windows 10 deployment
+Azure Virtual Desktop lets you use Windows 10 Enterprise multi-session, the only Windows client-based operating system that enables multiple concurrent users on a single VM. Azure Virtual Desktop also provides a more consistent experience with broader application support compared to Windows Server-based operating systems.
+
+## How can you reduce costs with Azure Virtual Desktop?
+
+### Bring your own licenses
+Azure Virtual Desktop is available to you at no additional cost if you have an eligible Microsoft 365 license. Just pay for the Azure resources used by Azure Virtual Desktop.
+
+- Bring your eligible Windows or Microsoft 365 license to get Windows 10 Enterprise and Windows 7 Enterprise desktops and apps at no additional cost.
+- If you're an eligible Microsoft Remote Desktop Services Client Access License customer, Windows Server Remote Desktop Services desktops and apps are available at no additional cost.
+
+### Save on compute costs
+Buy one-year or three-year Azure Reserved Virtual Machine Instances to save you up to 72 percent versus pay-as-you-go pricing. You can pay for a reservation up front or monthly. Reservations provide a billing discount and don't affect the runtime state of your resources.
+
+---
+
+## What is Azure virtual networking?
+Azure virtual networks enable Azure resources, such as VMs, web apps, and databases, to communicate with each other, with users on the internet, and with your on-premises client computers. You can think of an Azure network as an extension of your on-premises network with resources that links other Azure resources.
+
+Azure virtual networks provide the following key networking capabilities:
+- Isolation and segmentation
+- Internet communications
+- Communicate between Azure resources
+- Communicate with on-premises resources
+- Route network traffic
+- Filter network traffic
+- Connect virtual networks
+
+## Isolation and segmentation
+Azure virtual network allows you to create multiple isolated virtual networks. When you set up a virtual network, you define a private IP address space by using either public or private IP address ranges. The public IP range only exists within the virtual network and isn't internet routable. You can divide that IP address space into subnets and allocate part of the defined address space to each named subnet.
+
+For name resolution, you can use the name resolution service that's built in to Azure. You can also configure the virtual network to use an internal or an external DNS server.
+
+## Internet communications
+A VM in Azure can connect to the internet by default. You can enable incoming connections from the internet by assigning a public IP address to the VM or by putting the VM behind a public load balancer. For VM management, you can connect via the Azure CLI, Remote Desktop Protocol, or Secure Shell.
+
+## Communicate between Azure resources
+You'll want to enable Azure resources to communicate securely with each other. You can do that in one of two ways:
+- **Virtual networks** Virtual networks can connect not only VMs but other Azure resources, such as the App Service Environment for Power Apps, Azure Kubernetes Service, and Azure virtual machine scale sets.
+- **Service endpoints** You can use service endpoints to connect to other Azure resource types, such as Azure SQL databases and storage accounts. This approach enables you to link multiple Azure resources to virtual networks to improve security and provide optimal routing between resources.
+
+## Communicate with on-premises resources
+Azure virtual networks enable you to link resources together in your on-premises environment and within your Azure subscription. In effect, you can create a network that spans both your local and cloud environments. There are three mechanisms for you to achieve this connectivity:
+- ** Point-to-site virtual private networks** The typical approach to a virtual private network (VPN) connection is from a computer outside your organization, back into your corporate network. In this case, the client computer initiates an encrypted VPN connection to connect that computer to the Azure virtual network.
+- **Site-to-site virtual private networks** A site-to-site VPN links your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network. In effect, the devices in Azure can appear as being on the local network. The connection is encrypted and works over the internet.
+- **Azure ExpressRoute** For environments where you need greater bandwidth and even higher levels of security, Azure ExpressRoute is the best approach. ExpressRoute provides a dedicated private connectivity to Azure that doesn't travel over the internet. (You'll learn more about ExpressRoute in a separate unit later in this module.)
+
+## Route network traffic
+By default, Azure routes traffic between subnets on any connected virtual networks, on-premises networks, and the internet. You can also control routing and override those settings, as follows:
+- **Route tables** A route table allows you to define rules about how traffic should be directed. You can create custom route tables that control how packets are routed between subnets.
+- **Border Gateway Protocol** Border Gateway Protocol (BGP) works with Azure VPN gateways, Azure Route Server, or ExpressRoute to propagate on-premises BGP routes to Azure virtual networks.
+
+## Filter network traffic
+Azure virtual networks enable you to filter traffic between subnets by using the following approaches:
+- **Network security groups** A network security group is an Azure resource that can contain multiple inbound and outbound security rules. You can define these rules to allow or block traffic, based on factors such as source and destination IP address, port, and protocol.
+- **Network virtual appliances** A network virtual appliance is a specialized VM that can be compared to a hardened network appliance. A network virtual appliance carries out a particular network function, such as running a firewall or performing wide area network (WAN) optimization.
+
+## Connect virtual networks
+You can link virtual networks together by using virtual network peering. Peering enables resources in each virtual network to communicate with each other. These virtual networks can be in separate regions, which allows you to create a global interconnected network through Azure.
+
+User-defined routes (UDR) are a significant update to Azure’s Virtual Networks that allows for greater control over network traffic flow. This method allows network administrators to control the routing tables between subnets within a VNet, as well as between VNets.
