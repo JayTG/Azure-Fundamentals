@@ -295,3 +295,134 @@ You can build a flexible structure of management groups and subscriptions to org
 - Each management group can have many children.
 - All subscriptions and management groups are within a single hierarchy in each directory.
 
+---
+# Part 2 Describe core Azure services
+
+## Overview of Azure compute services
+Azure supports a wide range of computing solutions for development and testing, running applications, and extending your datacenter. The service supports Linux, Windows Server, SQL Server, Oracle, IBM, and SAP. Azure also has many services that can run virtual machines (VMs). Each service provides different options depending on your requirements. Some of the most prominent services are:
+
+- Azure Virtual Machines
+- Azure Container Instances
+- Azure App Service
+- Azure Functions (or serverless computing)
+
+## Examples of when to use VMs
+- **During testing and development.** VMs provide a quick and easy way to create different OS and application configurations. Test and development personnel can then easily delete the VMs when they no longer need them.
+- **When running applications in the cloud.** The ability to run certain applications in the public cloud as opposed to creating a traditional infrastructure to run them can provide substantial economic benefits. For example, an application might need to handle fluctuations in demand. Shutting down VMs when you don't need them or quickly starting them up to meet a sudden increase in demand means you pay only for the resources you use.
+- **When extending your datacenter to the cloud.** An organization can extend the capabilities of its own on-premises network by creating a virtual network in Azure and adding VMs to that virtual network. Applications like SharePoint can then run on an Azure VM instead of running locally. This arrangement makes it easier or less expensive to deploy than in an on-premises environment.
+- **During disaster recovery.** As with running certain types of applications in the cloud and extending an on-premises network to the cloud, you can get significant cost savings by using an IaaS-based approach to disaster recovery. If a primary datacenter fails, you can create VMs running on Azure to run your critical applications and then shut them down when the primary datacenter becomes operational again.
+
+## Scale VMs in Azure
+You can run single VMs for testing, development, or minor tasks. Or you can group VMs together to provide high availability, scalability, and redundancy. No matter what your uptime requirements are, Azure has several features that can meet them. These features include:
+
+- Virtual machine scale sets
+- Azure Batch
+
+## What are virtual machine scale sets?
+Virtual machine scale sets let you create and manage a group of identical, load-balanced VMs. Imagine you're running a website that enables scientists to upload astronomy images that need to be processed. If you duplicated the VM, you'd normally need to configure an additional service to route requests between multiple instances of the website. Virtual machine scale sets could do that work for you.
+
+Scale sets allow you to centrally manage, configure, and update a large number of VMs in minutes to provide highly available applications. The number of VM instances can automatically increase or decrease in response to demand or a defined schedule. With virtual machine scale sets, you can build large-scale services for areas such as compute, big data, and container workloads.
+
+## What is Azure Batch?
+
+Azure Batch enables large-scale parallel and high-performance computing (HPC) batch jobs with the ability to scale to tens, hundreds, or thousands of VMs.
+
+When you're ready to run a job, Batch does the following:
+
+- Starts a pool of compute VMs for you.
+- Installs applications and staging data.
+- Runs jobs with as many tasks as you have.
+- Identifies failures.
+- Requeues work.
+- Scales down the pool as work completes.
+
+## Types of app services
+With App Service, you can host most common app service styles like:
+
+- Web apps
+- API apps
+- WebJobs
+- Mobile apps
+
+App Service handles most of the infrastructure decisions you deal with in hosting web-accessible apps:
+
+- Deployment and management are integrated into the platform.
+- Endpoints can be secured.
+- Sites can be scaled quickly to handle high traffic loads.
+- The built-in load balancing and traffic manager provide high availability.
+
+All of these app styles are hosted in the same infrastructure and share these benefits. This flexibility makes App Service the ideal choice to host web-oriented applications.
+
+### Web apps
+App Service includes full support for hosting web apps by using ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP, or Python. You can choose either Windows or Linux as the host operating system.
+
+### API apps
+Much like hosting a website, you can build REST-based web APIs by using your choice of language and framework. You get full Swagger support and the ability to package and publish your API in Azure Marketplace. The produced apps can be consumed from any HTTP- or HTTPS-based client.
+
+### WebJobs
+You can use the WebJobs feature to run a program (.exe, Java, PHP, Python, or Node.js) or script (.cmd, .bat, PowerShell, or Bash) in the same context as a web app, API app, or mobile app. They can be scheduled or run by a trigger. WebJobs are often used to run background tasks as part of your application logic.
+
+### Mobile apps
+Use the Mobile Apps feature of App Service to quickly build a back end for iOS and Android apps. With just a few clicks in the Azure portal, you can:
+
+- Store mobile app data in a cloud-based SQL database.
+- Authenticate customers against common social providers, such as MSA, Google, Twitter, and Facebook.
+- Send push notifications.
+- Execute custom back-end logic in C# or Node.js.
+
+## What are containers?
+Containers are a virtualization environment. Much like running multiple virtual machines on a single physical host, you can run multiple containers on a single physical or virtual host. Unlike virtual machines, you don't manage the operating system for a container. Virtual machines appear to be an instance of an operating system that you can connect to and manage, but containers are lightweight and designed to be created, scaled out, and stopped dynamically. While it's possible to create and deploy virtual machines as application demand increases, containers are designed to allow you to respond to changes on demand. With containers, you can quickly restart in case of a crash or hardware interruption. One of the most popular container engines is Docker, which is supported by Azure.
+
+## Manage containers
+Containers are managed through a container orchestrator, which can start, stop, and scale out application instances as needed. There are two ways to manage both Docker and Microsoft-based containers in Azure: Azure Container Instances and Azure Kubernetes Service (AKS).
+
+### Azure Container Instances
+Azure Container Instances offers the fastest and simplest way to run a container in Azure without having to manage any virtual machines or adopt any additional services. It's a platform as a service (PaaS) offering that allows you to upload your containers, which it runs for you.
+
+### Azure Kubernetes Service
+The task of automating, managing, and interacting with a large number of containers is known as orchestration. Azure Kubernetes Service is a complete orchestration service for containers with distributed architectures and large volumes of containers.
+
+## Use containers in your solutions
+Containers are often used to create solutions by using a microservice architecture. This architecture is where you break solutions into smaller, independent pieces. For example, you might split a website into a container hosting your front end, another hosting your back end, and a third for storage. This split allows you to separate portions of your app into logical sections that can be maintained, scaled, or updated independently.
+
+Imagine your website back-end has reached capacity but the front end and storage aren't being stressed. You could:
+
+- Scale the back end separately to improve performance.
+- Decide to use a different storage service.
+- Replace the storage container without affecting the rest of the application.
+
+## Serverless computing 
+Serverless computing is the abstraction of servers, infrastructure, and operating systems. With serverless computing, Azure takes care of managing the server infrastructure and the allocation and deallocation of resources based on demand. Infrastructure isn't your responsibility. Scaling and performance are handled automatically. You're billed only for the exact resources you use. There's no need to even reserve capacity.
+
+Serverless computing includes the abstraction of servers, an event-driven scale, and micro-billing:
+
+- **Abstraction of servers:** Serverless computing abstracts the servers you run on. You never explicitly reserve server instances. The platform manages that for you. Each function execution can run on a different compute instance. This execution context is transparent to the code. With serverless architecture, you deploy your code, which then runs with high availability.
+- **Event-driven scale:** Serverless computing is an excellent fit for workloads that respond to incoming events. Events include triggers by:
+   - Timers, for example, if a function needs to run every day at 10:00 AM UTC.
+   - HTTP, for example, API and webhook scenarios.
+   - Queues, for example, with order processing.
+
+Instead of writing an entire application, the developer authors a function, which contains both code and metadata about its triggers and bindings. The platform automatically schedules the function to run and scales the number of compute instances based on the rate of incoming events. Triggers define how a function is invoked. Bindings provide a declarative way to connect to services from within the code.
+
+- **Micro-billing:** Traditional computing bills for a block of time like paying a monthly or annual rate for website hosting. This method of billing is convenient but isn't always cost effective. Even if a customer's website gets only one hit a day, they still pay for a full day's worth of availability. With serverless computing, they pay only for the time their code runs. If no active function executions occur, they're not charged. For example, if the code runs once a day for two minutes, they're charged for one execution and two minutes of computing time.
+
+## Serverless computing in Azure
+Azure has two implementations of serverless compute:
+- **Azure Functions:** Functions can execute code in almost any modern language.
+- **Azure Logic Apps:** Logic apps are designed in a web-based designer and can execute logic triggered by Azure services without writing any code.
+
+## Azure Functions
+Using Azure Functions is ideal when you're only concerned with the code that runs your service, not the underlying platform or infrastructure. Functions are commonly used when you need to do work in response to an event, timer, or message from another Azure service, and that job can be completed quickly in a few seconds or less. Functions automatically scale with demand, so it's a solid choice when demand is volatile. With functions, Azure runs your code when triggered and automatically releases resources when the function is finished.
+
+Functions can be stateless or stateful. Functions are an essential component of serverless computing. This flexibility allows you to manage scaling, run in virtual networks, and even completely isolate functions.
+
+## Azure Logic Apps
+Logic applications are similar to functions. Both allow you to trigger logic based on an event. Where functions execute code, logic apps execute workflows built from predefined logic blocks designed to automate business scenarios. Every Azure logic app workflow starts with a trigger that fires when a certain event occurs or when newly available data meets certain criteria.
+
+Each time the trigger is triggered, the Logic Apps engine creates a logic app instance that runs the actions in the workflow. You create logic app workflows using a visual designer in the Azure portal or in Visual Studio. Workflows are persisted as a JSON file with a known workflow diagram. You pass the data through the workflow to do custom processing, most of the time without writing any code.
+
+## Functions vs. Logic Apps
+Functions and Logic Apps can both create complex orchestrations. An orchestration is a collection of functions or steps that are executed to accomplish a complex task.
+
+- With Functions, you write code to complete each step.
+- With Logic Apps, you use a GUI to define the actions and how they relate to one another.
