@@ -75,6 +75,8 @@
   - [Filter network traffic](#filter-network-traffic)
   - [Connect virtual networks](#connect-virtual-networks)
   - [Creating a virtual network example](#creating-a-virtual-network-example)
+  - [Define additional settings](#define-additional-settings)
+  - [Configure virtual networks](#configure-virtual-networks)
 
 # Part 1: Describe core Azure concepts
   
@@ -565,4 +567,16 @@ User-defined routes (UDR) are a significant update to Azure’s Virtual Networks
 
 ![create-virtual-network-security-286df13c](https://user-images.githubusercontent.com/87706066/162443356-f21c5cb9-5eac-4ee1-b921-4bb52b393b8c.png)
 
+## Define additional settings
+
+After you create a virtual network, you can then define further settings. These include:
+- **Network security group** Network security groups have security rules that enable you to filter the type of network traffic that can flow in and out of virtual network subnets and network interfaces. You create the network security group separately. Then you associate it with each subnet in the virtual network.
+- **Route table** Azure automatically creates a route table for each subnet within an Azure virtual network and adds system default routes to the table. You can add custom route tables to modify traffic between subnets and virtual networks.
+- **Subnet Delegation** You can designate the subnet to be used by a dedicate service.
+
+You can also amend the service endpoints and NAT gateway configuration.
+
+
+## Configure virtual networks
+After you've created a virtual network, you can change any further settings on the Virtual network pane in the Azure portal. Alternatively, you can use PowerShell commands or commands in Cloud Shell to make changes.
 
