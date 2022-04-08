@@ -772,8 +772,11 @@ Use Azure Files for the following situations:
 
 The following illustration shows Azure Files being used to share data between two geographical locations. Azure Files ensures the data is encrypted at rest, and the SMB protocol ensures the data is encrypted in transit.
 
+![azure-files-5f942c3e](https://user-images.githubusercontent.com/87706066/162455177-2f434d64-8502-41df-94a1-9eb819e24ebd.png)
+
 
 One thing that distinguishes Azure Files from files on a corporate file share is that you can access the files from anywhere in the world, by using a URL that points to the file. You can also use Shared Access Signature (SAS) tokens to allow access to a private asset for a specific amount of time.
 
 Here's an example of a service SAS URI, showing the resource URI and the SAS token:
+![sas-storage-uri-037308fa](https://user-images.githubusercontent.com/87706066/162455154-efc82184-21c7-4095-88e4-e69af21cb52b.png)
 
