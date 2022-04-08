@@ -449,3 +449,5 @@ Functions and Logic Apps can both create complex orchestrations. An orchestratio
 
 - With Functions, you write code to complete each step.
 - With Logic Apps, you use a GUI to define the actions and how they relate to one another.
+
+![Screenshot 2022-04-08 110018](https://user-images.githubusercontent.com/87706066/162414583-a79d2338-ba36-41eb-88e4-14c467d02386.png)
