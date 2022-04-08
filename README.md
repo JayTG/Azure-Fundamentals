@@ -616,4 +616,9 @@ Key features of route-based VPN gateways in Azure include:
 - Uses any-to-any (wildcard) traffic selectors
 - Can use dynamic routing protocols, where routing/forwarding tables direct traffic to different IPSec tunnels In this case, the source and destination networks aren't statically defined as they are in policy-based VPNs or even in route-based VPNs with static routing. Instead, data packets are encrypted based on network routing tables that are created dynamically using routing protocols such as Border Gateway Protocol (BGP).
 
+![PolicyBasedVPNRouteBasedVPN](https://user-images.githubusercontent.com/87706066/162446654-54ffa0a5-9fd3-48b7-bce2-d18972d226fc.png)
+
 ## VPN gateway sizes
+![Screenshot 2022-04-08 143223](https://user-images.githubusercontent.com/87706066/162446503-a8feeb99-2733-473e-aa6b-279be64e7a03.png)
+
+
