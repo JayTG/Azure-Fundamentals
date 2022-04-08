@@ -94,6 +94,13 @@
   - [Connectivity to Microsoft cloud services](#connectivity-to-microsoft-cloud-services)
   - [Dynamic routing](#dynamic-routing)
   - [ExpressRoute connectivity models](#expressroute-connectivity-models)
+  - [Colocation at a cloud exchange](#colocation-at-a-cloud-exchange)
+  - [Point-to-point Ethernet connection](#point-to-point-ethernet-connection)
+  - [Any-to-any networks](#any-to-any-networks)
+  - [Directly from ExpressRoute sites](#directly-from-expressroute-sites)
+  - [Security considerations](#security-considerations)
+  - [Disk storage fundamentals](#disk-storage-fundamentals)
+  - [Azure Blob storage fundamentals](#azure-blob-storage-fundamentals)
 
 # Part 1: Describe core Azure concepts
   
@@ -708,3 +715,44 @@ ExpressRoute enables direct access to the following services in all regions:
 - Directly from ExpressRoute sites
 
 ![azure-connectivity-models-4deabab1](https://user-images.githubusercontent.com/87706066/162451246-0a0f2aac-e416-43d4-a4ca-6d82b7455efd.png)
+
+## Colocation at a cloud exchange
+Colocated providers can normally offer both Layer 2 and Layer 3 connections between your infrastructure, which might be located in the colocation facility, and the Microsoft cloud. For example, if your datacenter is colocated at a cloud exchange such as an ISP, you can request a virtual cross-connection to the Microsoft cloud.
+
+## Point-to-point Ethernet connection
+Point-to-point connections provide Layer 2 and Layer 3 connectivity between your on-premises site and Azure. You can connect your offices or datacenters to Azure by using the point-to-point links. For example, if you have an on-premises datacenter, you can use a point-to-point Ethernet link to connect to Microsoft.
+
+## Any-to-any networks
+With any-to-any connectivity, you can integrate your wide area network (WAN) with Azure by providing connections to your offices and datacenters. Azure integrates with your WAN connection to provide a connection like you would have between your datacenter and any branch offices.
+
+With any-to-any connections, all WAN providers offer Layer 3 connectivity. For example, if you already use Multiprotocol Label Switching to connect to your branch offices or other sites in your organization, an ExpressRoute connection to Microsoft behaves like any other location on your private WAN.
+
+## Directly from ExpressRoute sites
+You can connect directly into the Microsoft's global network at a peering location strategically distributed across the world. ExpressRoute Direct provides dual 100 Gbps or 10-Gbps connectivity, which supports Active/Active connectivity at scale.
+
+## Security considerations
+With ExpressRoute, your data doesn't travel over the public internet, so it's not exposed to the potential risks associated with internet communications. ExpressRoute is a private connection from your on-premises infrastructure to your Azure infrastructure. Even if you have an ExpressRoute connection, DNS queries, certificate revocation list checking, and Azure Content Delivery Network requests are still sent over the public internet.
+
+---
+
+## Disk storage fundamentals
+Disk Storage provides disks for Azure virtual machines. Disk Storage allows data to be persistently stored and accessed from an attached virtual hard disk.
+You can use standard SSD and HDD disks for less critical workloads, premium SSD disks for mission-critical production applications, and ultra disks for data-intensive workloads such as SAP HANA, top tier databases, and transaction-heavy workloads.
+
+The following illustration shows an Azure virtual machine that uses separate disks to store different data.
+
+## Azure Blob storage fundamentals
+Azure Blob Storage is an object storage solution for the cloud. Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold. Blobs aren't limited to common file formats. A blob could contain gigabytes of binary data streamed from a scientific instrument, an encrypted message for another application, or data in a custom format for an app you're developing. 
+
+Blob Storage is ideal for:
+- Serving images or documents directly to a browser.
+- Storing files for distributed access.
+- Streaming video and audio.
+- Storing data for backup and restore, disaster recovery, and archiving.
+- Storing data for analysis by an on-premises or Azure-hosted service.
+- Storing up to 8 TB of data for virtual machines.
+
+You store blobs in containers, which helps you organize your blobs depending on your business needs.
+
+The following diagram illustrates how you might use Azure accounts, containers, and blobs.
+
