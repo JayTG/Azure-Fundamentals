@@ -102,6 +102,7 @@
   - [Disk storage fundamentals](#disk-storage-fundamentals)
   - [Azure Blob storage fundamentals](#azure-blob-storage-fundamentals)
   - [Azure Files fundamentals](#azure-files-fundamentals)
+  - [Understand Blob access tiers](#understand-blob-access-tiers)
 
 # Part 1: Describe core Azure concepts
   
@@ -779,4 +780,21 @@ One thing that distinguishes Azure Files from files on a corporate file share is
 
 Here's an example of a service SAS URI, showing the resource URI and the SAS token:
 ![sas-storage-uri-037308fa](https://user-images.githubusercontent.com/87706066/162455154-efc82184-21c7-4095-88e4-e69af21cb52b.png)
+
+## Understand Blob access tiers
+
+Azure Storage offers different access tiers for your blob storage, helping you store object data in the most cost-effective manner. The available access tiers include:
+
+- **Hot access tier:** Optimized for storing data that is accessed frequently (for example, images for your website).
+- **Cool access tier:** Optimized for data that is infrequently accessed and stored for at least 30 days (for example, invoices for your customers).
+- **Archive access tier:** Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible latency requirements (for example, long-term backups).
+
+The following considerations apply to the different access tiers:
+
+- Only the hot and cool access tiers can be set at the account level. The archive access tier isn't available at the account level.
+- Hot, cool, and archive tiers can be set at the blob level, during upload or after upload.
+- Data in the cool access tier can tolerate slightly lower availability, but still requires high durability, retrieval latency, and throughput characteristics similar to hot data. For cool data, a slightly lower availability service-level agreement (SLA) and higher access costs compared to hot data are acceptable trade-offs for lower storage costs.
+- Archive storage stores data offline and offers the lowest storage costs, but also the highest costs to rehydrate and access data.
+
+The following illustration demonstrates choosing between the hot and cool access tiers on a general purpose storage account.
 
