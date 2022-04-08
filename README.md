@@ -81,6 +81,12 @@
   - [Policy-based VPNs](#policy-based-vpns)
   - [Route-based VPNs](#route-based-vpns)
   - [VPN gateway sizes](#vpn-gateway-sizes)
+  - [Required Azure resources](#required-azure-resources)
+  - [Required on-premises resources](#required-on-premises-resources)
+  - [Active/standby](#activestandby)
+  - [Active/active](#activeactive)
+  - [ExpressRoute failover](#expressroute-failover)
+  - [Zone-redundant gateways](#zone-redundant-gateways)
 
 # Part 1: Describe core Azure concepts
   
@@ -622,3 +628,27 @@ Key features of route-based VPN gateways in Azure include:
 ![Screenshot 2022-04-08 143223](https://user-images.githubusercontent.com/87706066/162446503-a8feeb99-2733-473e-aa6b-279be64e7a03.png)
 
 
+## Required Azure resources
+
+The following diagram shows this combination of resources and their relationships to help you better understand what's required to deploy a VPN gateway.
+
+## Required on-premises resources
+
+To connect your datacenter to a VPN gateway, you'll need these on-premises resources:
+
+- A VPN device that supports policy-based or route-based VPN gateways
+- A public-facing (internet-routable) IPv4 address
+
+## Active/standby
+By default, VPN gateways are deployed as two instances in an active/standby configuration, even if you only see one VPN gateway resource in Azure. When planned maintenance or unplanned disruption affects the active instance, the standby instance automatically assumes responsibility for connections without any user intervention. Connections are interrupted during this failover, but they're typically restored within a few seconds for planned maintenance and within 90 seconds for unplanned disruptions.
+
+## Active/active
+With the introduction of support for the BGP routing protocol, you can also deploy VPN gateways in an active/active configuration. In this configuration, you assign a unique public IP address to each instance. You then create separate tunnels from the on-premises device to each IP address. You can extend the high availability by deploying an additional VPN device on-premises.
+
+## ExpressRoute failover
+Another high-availability option is to configure a VPN gateway as a secure failover path for ExpressRoute connections. But they aren't immune to physical problems that affect the cables delivering connectivity or outages that affect the complete ExpressRoute location. In this way, you can ensure there's always a connection to the virtual networks.
+
+## Zone-redundant gateways
+Deploying gateways in Azure availability zones physically and logically separates gateways within a region while protecting your on-premises network connectivity to Azure from zone-level failures. These gateways require different gateway SKUs and use Standard public IP addresses instead of Basic public IP addresses.
+
+--- 
