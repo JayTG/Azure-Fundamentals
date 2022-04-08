@@ -742,6 +742,9 @@ You can use standard SSD and HDD disks for less critical workloads, premium SSD 
 
 The following illustration shows an Azure virtual machine that uses separate disks to store different data.
 
+
+![azure-disks-7841e01e](https://user-images.githubusercontent.com/87706066/162454137-4063e8a2-b978-4dd3-bb3b-0c47ac8efe08.png)
+
 ## Azure Blob storage fundamentals
 Azure Blob Storage is an object storage solution for the cloud. Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold. Blobs aren't limited to common file formats. A blob could contain gigabytes of binary data streamed from a scientific instrument, an encrypted message for another application, or data in a custom format for an app you're developing. 
 
@@ -757,6 +760,8 @@ You store blobs in containers, which helps you organize your blobs depending on 
 
 The following diagram illustrates how you might use Azure accounts, containers, and blobs.
 
+![account-container-blob-4da0ac47](https://user-images.githubusercontent.com/87706066/162454161-093ba263-73b9-4939-900c-31f9fdcc3286.png)
+
 ## Azure Files fundamentals
 Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block and Network File System protocols. Applications running in Azure virtual machines or cloud services can mount a file storage share to access file data, just as a desktop application would mount a typical SMB share. Typical usage scenarios would be to share files anywhere in the world, diagnostic data, or application data sharing.
 
@@ -766,4 +771,5 @@ Use Azure Files for the following situations:
 - Write data to a file share, and process or analyze the data later. For example, you might want to do this with diagnostic logs, metrics, and crash dumps.
 
 The following illustration shows Azure Files being used to share data between two geographical locations. Azure Files ensures the data is encrypted at rest, and the SMB protocol ensures the data is encrypted in transit.
+
 
