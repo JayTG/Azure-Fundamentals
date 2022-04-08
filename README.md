@@ -642,8 +642,12 @@ To connect your datacenter to a VPN gateway, you'll need these on-premises resou
 ## Active/standby
 By default, VPN gateways are deployed as two instances in an active/standby configuration, even if you only see one VPN gateway resource in Azure. When planned maintenance or unplanned disruption affects the active instance, the standby instance automatically assumes responsibility for connections without any user intervention. Connections are interrupted during this failover, but they're typically restored within a few seconds for planned maintenance and within 90 seconds for unplanned disruptions.
 
+![active-standby-c4a3c14d](https://user-images.githubusercontent.com/87706066/162449221-f4a33f2d-3490-4547-92e1-fada2d6d4feb.png)
+
 ## Active/active
 With the introduction of support for the BGP routing protocol, you can also deploy VPN gateways in an active/active configuration. In this configuration, you assign a unique public IP address to each instance. You then create separate tunnels from the on-premises device to each IP address. You can extend the high availability by deploying an additional VPN device on-premises.
+
+![dual-redundancy-d76100c9](https://user-images.githubusercontent.com/87706066/162449329-3dce70b1-f9af-46be-8a64-f526a9b75d52.png)
 
 ## ExpressRoute failover
 Another high-availability option is to configure a VPN gateway as a secure failover path for ExpressRoute connections. But they aren't immune to physical problems that affect the cables delivering connectivity or outages that affect the complete ExpressRoute location. In this way, you can ensure there's always a connection to the virtual networks.
