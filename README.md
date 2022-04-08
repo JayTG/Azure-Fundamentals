@@ -559,3 +559,10 @@ User-defined routes (UDR) are a significant update to Azure’s Virtual Networks
 --- 
 ## Creating a virtual network example
 
+![create-virtual-network-286df13c](https://user-images.githubusercontent.com/87706066/162442998-041c05e4-0724-418e-b5b2-004b3bfdd70c.png)
+
+![create-virtual-network-ip-address-286df13c](https://user-images.githubusercontent.com/87706066/162443021-6eb82c39-cae1-40a7-9445-9a610d62a854.png)
+
+![create-virtual-network-security-286df13c](https://user-images.githubusercontent.com/87706066/162443356-f21c5cb9-5eac-4ee1-b921-4bb52b393b8c.png)
+
+
