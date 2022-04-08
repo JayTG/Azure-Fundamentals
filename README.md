@@ -741,6 +741,9 @@ You can use standard SSD and HDD disks for less critical workloads, premium SSD 
 
 The following illustration shows an Azure virtual machine that uses separate disks to store different data.
 
+
+![azure-disks-7841e01e](https://user-images.githubusercontent.com/87706066/162454137-4063e8a2-b978-4dd3-bb3b-0c47ac8efe08.png)
+
 ## Azure Blob storage fundamentals
 Azure Blob Storage is an object storage solution for the cloud. Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold. Blobs aren't limited to common file formats. A blob could contain gigabytes of binary data streamed from a scientific instrument, an encrypted message for another application, or data in a custom format for an app you're developing. 
 
@@ -756,3 +759,4 @@ You store blobs in containers, which helps you organize your blobs depending on 
 
 The following diagram illustrates how you might use Azure accounts, containers, and blobs.
 
+![account-container-blob-4da0ac47](https://user-images.githubusercontent.com/87706066/162454161-093ba263-73b9-4939-900c-31f9fdcc3286.png)
