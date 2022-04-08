@@ -706,3 +706,5 @@ ExpressRoute enables direct access to the following services in all regions:
 - Point-to-point Ethernet connection
 - Any-to-any connection
 - Directly from ExpressRoute sites
+
+![azure-connectivity-models-4deabab1](https://user-images.githubusercontent.com/87706066/162451246-0a0f2aac-e416-43d4-a4ca-6d82b7455efd.png)
