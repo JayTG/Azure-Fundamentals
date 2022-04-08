@@ -576,7 +576,10 @@ After you create a virtual network, you can then define further settings. These 
 
 You can also amend the service endpoints and NAT gateway configuration.
 
+![virtual-network-additional-settings-faff6cec](https://user-images.githubusercontent.com/87706066/162444328-a84a431b-dd2f-4116-9cbc-3c537482656c.png)
 
 ## Configure virtual networks
 After you've created a virtual network, you can change any further settings on the Virtual network pane in the Azure portal. Alternatively, you can use PowerShell commands or commands in Cloud Shell to make changes.
+
+![configure-virtual-network-9d0515c5](https://user-images.githubusercontent.com/87706066/162444372-aaae8a3a-693a-434b-9144-76a4d723f711.png)
 
