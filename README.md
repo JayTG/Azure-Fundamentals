@@ -77,6 +77,10 @@
   - [Creating a virtual network example](#creating-a-virtual-network-example)
   - [Define additional settings](#define-additional-settings)
   - [Configure virtual networks](#configure-virtual-networks)
+  - [VPN gateways](#vpn-gateways)
+  - [Policy-based VPNs](#policy-based-vpns)
+  - [Route-based VPNs](#route-based-vpns)
+  - [VPN gateway sizes](#vpn-gateway-sizes)
 
 # Part 1: Describe core Azure concepts
   
@@ -583,3 +587,33 @@ After you've created a virtual network, you can change any further settings on t
 
 ![configure-virtual-network-9d0515c5](https://user-images.githubusercontent.com/87706066/162444372-aaae8a3a-693a-434b-9144-76a4d723f711.png)
 
+---
+## VPN gateways
+A VPN gateway is a type of virtual network gateway. Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual network and enable the following connectivity:
+- Connect on-premises datacenters to virtual networks through a site-to-site connection.
+- Connect individual devices to virtual networks through a point-to-site connection.
+- Connect virtual networks to other virtual networks through a network-to-network connection.
+
+## Policy-based VPNs
+Policy-based VPN gateways specify statically the IP address of packets that should be encrypted through each tunnel. This type of device evaluates every data packet against those sets of IP addresses to choose the tunnel where that packet is going to be sent through.
+
+Key features of policy-based VPN gateways in Azure include:
+- Support for IKEv1 only.
+- Use of static routing, where combinations of address prefixes from both networks control how traffic is encrypted and decrypted through the VPN tunnel. The source and destination of the tunneled networks are declared in the policy and don't need to be declared in routing tables.
+- Policy-based VPNs must be used in specific scenarios that require them, such as for compatibility with legacy on-premises VPN devices.
+
+## Route-based VPNs
+If defining which IP addresses are behind each tunnel is too cumbersome, route-based gateways can be used. With route-based gateways, IPSec tunnels are modeled as a network interface or virtual tunnel interface. IP routing (either static routes or dynamic routing protocols) decides which one of these tunnel interfaces to use when sending each packet. Route-based VPNs are the preferred connection method for on-premises devices. They're more resilient to topology changes such as the creation of new subnets.
+
+Use a route-based VPN gateway if you need any of the following types of connectivity:
+- Connections between virtual networks
+- Point-to-site connections
+- Multisite connections
+- Coexistence with an Azure ExpressRoute gateway
+
+Key features of route-based VPN gateways in Azure include:
+- Supports IKEv2
+- Uses any-to-any (wildcard) traffic selectors
+- Can use dynamic routing protocols, where routing/forwarding tables direct traffic to different IPSec tunnels In this case, the source and destination networks aren't statically defined as they are in policy-based VPNs or even in route-based VPNs with static routing. Instead, data packets are encrypted based on network routing tables that are created dynamically using routing protocols such as Border Gateway Protocol (BGP).
+
+## VPN gateway sizes
