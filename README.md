@@ -800,4 +800,4 @@ The following illustration demonstrates choosing between the hot and cool access
 
 ![account-tier-42ec76d7](https://user-images.githubusercontent.com/87706066/162456217-4cf88be3-65ec-40ac-a220-c5c2ecce5c04.png)
 
-
+---
