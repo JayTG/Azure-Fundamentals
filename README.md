@@ -151,6 +151,14 @@
     - [Regarding source-code management and DevOps tools, what level of granularity do you need for permissions?](#regarding-source-code-management-and-devops-tools-what-level-of-granularity-do-you-need-for-permissions)
     - [Regarding source-code management and DevOps tools, how sophisticated does your project management and reporting need to be?](#regarding-source-code-management-and-devops-tools-how-sophisticated-does-your-project-management-and-reporting-need-to-be)
     - [Regarding source-code management and DevOps tools, how tightly do you need to integrate with third-party tools?](#regarding-source-code-management-and-devops-tools-how-tightly-do-you-need-to-integrate-with-third-party-tools)
+  - [The Azure portal](#the-azure-portal)
+  - [The Azure mobile app](#the-azure-mobile-app)
+  - [Azure PowerShell](#azure-powershell)
+  - [The Azure CLI](#the-azure-cli)
+  - [ARM templates](#arm-templates)
+    - [Do you need to perform one-off management, administrative, or reporting actions?](#do-you-need-to-perform-one-off-management-administrative-or-reporting-actions)
+    - [Do you need a way to repeatedly set up one or more resources and ensure that all the dependencies are created in the proper order?](#do-you-need-a-way-to-repeatedly-set-up-one-or-more-resources-and-ensure-that-all-the-dependencies-are-created-in-the-proper-order)
+    - [When you're scripting, do you come from a Windows administration or Linux administration background?](#when-youre-scripting-do-you-come-from-a-windows-administration-or-linux-administration-background)
 
 # Part 1: Describe core Azure concepts
   
@@ -1122,5 +1130,57 @@ Although GitHub has work items, issues, and a Kanban board, project management a
 lthough we make no specific recommendations about third-party tools, it's important for you to understand your organization's existing investments in tools and services and to evaluate how these dependencies might affect your choice. It's likely that most vendors that create DevOps tools create hooks or APIs that can be used by both Azure Pipelines and GitHub Actions. Even so, it's probably worth the effort to validate that assumption.
 
 --- 
+
+## The Azure portal 
+By using the Azure portal, a web-based user interface, you can access virtually every feature of Azure. The Azure portal provides a friendly, graphical UI to view all the services you're using, create new services, configure your services, and view reports. The Azure portal is how most users first experience Azure. But, as your Azure usage grows, you'll likely choose a more repeatable code-centric approach to managing your Azure resources.
+
+## The Azure mobile app
+
+The Azure mobile app provides iOS and Android access to your Azure resources when you're away from your computer. With it, you can:
+
+- Monitor the health and status of your Azure resources.
+- Check for alerts, quickly diagnose and fix issues, and restart a web app or virtual machine (VM).
+- Run the Azure CLI or Azure PowerShell commands to manage your Azure resources.
+
+## Azure PowerShell
+Azure PowerShell is a shell with which developers and DevOps and IT professionals can execute commands called cmdlets (pronounced command-lets). These commands call the Azure Rest API to perform every possible management task in Azure. Cmdlets can be executed independently or combined into a script file and executed together to orchestrate:
+
+- The routine setup, teardown, and maintenance of a single resource or multiple connected resources.
+- The deployment of an entire infrastructure, which might contain dozens or hundreds of resources, from imperative code.
+
+Capturing the commands in a script makes the process repeatable and automatable.
+
+Azure PowerShell is available for Windows, Linux, and Mac, and you can access it in a web browser via Azure Cloud Shell.
+
+Windows PowerShell has helped Windows-centric IT organizations automate many of their on-premises operations for years, and these organizations have built up a large catalog of custom scripts and cmdlets, as well as expertise.
+
+## The Azure CLI
+The Azure CLI command-line interface is an executable program with which a developer, DevOps professional, or IT professional can execute commands in Bash. The commands call the Azure Rest API to perform every possible management task in Azure. You can run the commands independently or combined into a script and executed together for the routine setup, teardown, and maintenance of a single resource or an entire environment.
+
+In many respects, the Azure CLI is almost identical to Azure PowerShell in what you can do with it. Both run on Windows, Linux, and Mac, and can be accessed in a web browser via Cloud Shell. The primary difference is the syntax you use. If you're already proficient in PowerShell or Bash, you can use the tool you prefer.
+
+## ARM templates
+Although it's possible to write imperative code in Azure PowerShell or the Azure CLI to set up and tear down one Azure resource or orchestrate an infrastructure comprising hundreds of resources, there's a better way to implement this functionality.
+
+By using Azure Resource Manager templates (ARM templates), you can describe the resources you want to use in a declarative JSON format. The benefit is that the entire ARM template is verified before any code is executed to ensure that the resources will be created and connected correctly. The template then orchestrates the creation of those resources in parallel. That is, if you need 50 instances of the same resource, all 50 instances are created at the same time.
+
+Ultimately, the developer, DevOps professional, or IT professional needs only to define the desired state and configuration of each resource in the ARM template, and the template does the rest. Templates can even execute PowerShell and Bash scripts before or after the resource has been set up.
+
+### Do you need to perform one-off management, administrative, or reporting actions?
+
+By contrast to the Azure CLI and PowerShell, Azure Resource Manager templates define the infrastructure requirements in your application for repeatable deployments. Keep in mind that ARM templates can include both PowerShell and/or Azure CLI scripts, which will give you the ability to utilize scripts for tasks that may not be possible with the ARM template itself. The ability to combine Azure management tools gives flexibility in choosing the right tool for your particular need. The Azure portal can perform most, if not all, management and administrative actions.
+
+If you're just learning Azure and/or need to set up and manage resources infrequently , it makes sense to take advantage of the visual presentation that the Azure portal offers. To quickly find the settings and information you want to work with, the Azure CLI or PowerShell will give you the most flexibility for repeatable tasks. The last management tool to discuss is the Azure mobile app, which you can access via an iOS or Android phone or tablet.
+
+### Do you need a way to repeatedly set up one or more resources and ensure that all the dependencies are created in the proper order?
+
+ARM templates define your application's infrastructure requirements for a repeatable deployment that is done in a consistent manner. A validation step ensures that all resources can be created in the proper order based on dependencies, in parallel, and idempotent.
+
+By contrast, it's entirely possible to use either PowerShell or the Azure CLI to set up all the resources for a deployment. However, there's no validation step in these tools. If a script encounters an error, the dependency resources can't be rolled back easily, deployments happen serially, and only some operations are idempotent.
+
+### When you're scripting, do you come from a Windows administration or Linux administration background?
+If you or your cloud administrators come from a Windows administration background, it's likely you'll prefer PowerShell. If you or your cloud administrators come from a Linux administration background, it's likely you'll prefer the Azure CLI. In practice, either tool can be used to perform most one-off administration tasks.
+
+---
 
 
