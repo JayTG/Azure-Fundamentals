@@ -829,6 +829,8 @@ You can use advanced query processing features, such as high performance, in-mem
 ### Migration
 Tailwind Traders currently uses several on-premises servers running SQL Server, which provide data storage for your public-facing website . In addition, your on-premises servers running SQL Server also provide data storage for your internal-only training portal website. Tailwind Traders uses the website for new employee training materials .
 
+![azure-sql-45a3584a](https://user-images.githubusercontent.com/87706066/162713025-51b1bf2c-e5e8-459c-8a2e-15bfff7d2dc7.png)
+
 You can migrate your existing SQL Server databases with minimal downtime by using the Azure Database Migration Service. The Microsoft Data Migration Assistant can generate assessment reports that provide recommendations to help guide you through required changes prior to performing a migration. After you assess and resolve any remediation required, you're ready to begin the migration process. The Azure Database Migration Service performs all of the required steps. You just change the connection string in your apps.
 
 ## Azure database for MySQL
