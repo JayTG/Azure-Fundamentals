@@ -111,6 +111,9 @@
   - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
     - [Single Server](#single-server)
     - [Hyperscale (Citus)](#hyperscale-citus)
+  - [Azure SQL Managed Instance](#azure-sql-managed-instance)
+    - [Features](#features-1)
+    - [Migration](#migration-1)
 
 # Part 1: Describe core Azure concepts
   
@@ -877,4 +880,15 @@ You can build your first app on a small database for a few dollars a month, and 
 The Hyperscale (Citus) option horizontally scales queries across multiple machines by using sharding. Its query engine parallelizes incoming SQL queries across these servers for faster responses on large datasets. It serves applications that require greater scale and performance, generally workloads that are approaching, or already exceed, 100 GB of data.
 
 The Hyperscale (Citus) deployment option supports multi-tenant applications, real-time operational analytics, and high throughput transactional workloads. Applications built for PostgreSQL can run distributed queries on Hyperscale (Citus) with standard connection libraries and minimal changes.
+
+## Azure SQL Managed Instance
+
+Azure SQL Managed Instance is a scalable cloud data service that provides the broadest SQL Server database engine compatibility with all the benefits of a fully managed platform as a service. Depending on your scenario, Azure SQL Managed Instance might offer more options for your database needs.
+
+### Features
+Like Azure SQL Database, Azure SQL Managed Instance is a platform as a service database engine, which means that your company will be able to take advantage of the best features of moving your data to the cloud in a fully-managed environment. In addition, you'll be able to rest assured that your data will always be there when you need it through built-in high availability features and a 99.99% uptime service level agreement . You'll also be able to protect your data with automated backups and a configurable backup retention period.
+
+### Migration
+Azure SQL Managed Instance makes it easy to migrate your on-premises data on SQL Server to the cloud using the Azure Database Migration Service (DMS) or native backup and restore. After you have discovered all of the features that your company uses, you need to assess which on-premises SQL Server instances you can migrate to Azure SQL Managed Instance to see if you have any blocking issues. Once you have resolved any issues, you can migrate your data, then cutover from your on-premises SQL Server to your Azure SQL Managed Instance by changing the connection string in your applications.
+
 
