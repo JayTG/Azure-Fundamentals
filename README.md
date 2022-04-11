@@ -1225,6 +1225,8 @@ Azure Monitor is a platform for collecting, analyzing, visualizing, and potentia
 
 The following diagram illustrates just how comprehensive Azure Monitor is.
 
+![2-identify-product-options-01](https://user-images.githubusercontent.com/87706066/162779811-21f9f3ed-eb1b-41df-9733-c22f33622892.png)
+
 - On the left is a list of the sources of logging and metric data that can be collected at every layer in your application architecture, from application to operating system and network.
 
 - In the center, you can see how the logging and metric data is stored in central repositories.
