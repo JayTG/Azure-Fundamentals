@@ -807,6 +807,8 @@ A long-term plan might be to eventually move all disparate data to a common data
 
 The following illustration shows an example Azure Cosmos DB database used to store data for the Tailwind Traders Learning Portal website. 
 
+![azure-cosmos-db-1c115364](https://user-images.githubusercontent.com/87706066/162703389-0cf40d41-ce83-4951-b070-afa4d7153392.png)
+
 
 Azure Cosmos DB is flexible. At the lowest level, Azure Cosmos DB stores data in atom-record-sequence (ARS) format. The data is then abstracted and projected as an API, which you specify when you're creating your database. Your choices include SQL, MongoDB, Cassandra, Tables, and Gremlin. This level of flexibility means that as you migrate your company's databases to Azure Cosmos DB, your developers can stick with the API that they're the most comfortable with.
 
