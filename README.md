@@ -114,6 +114,10 @@
   - [Azure SQL Managed Instance](#azure-sql-managed-instance)
     - [Features](#features-1)
     - [Migration](#migration-1)
+  - [Azure Synapse Analytics](#azure-synapse-analytics)
+  - [Azure HDInsight](#azure-hdinsight)
+  - [Azure Databricks](#azure-databricks)
+  - [Azure Data Lake Analytics](#azure-data-lake-analytics)
 
 # Part 1: Describe core Azure concepts
   
@@ -890,5 +894,18 @@ Like Azure SQL Database, Azure SQL Managed Instance is a platform as a service d
 
 ### Migration
 Azure SQL Managed Instance makes it easy to migrate your on-premises data on SQL Server to the cloud using the Azure Database Migration Service (DMS) or native backup and restore. After you have discovered all of the features that your company uses, you need to assess which on-premises SQL Server instances you can migrate to Azure SQL Managed Instance to see if you have any blocking issues. Once you have resolved any issues, you can migrate your data, then cutover from your on-premises SQL Server to your Azure SQL Managed Instance by changing the connection string in your applications.
+
+## Azure Synapse Analytics
+
+Azure Synapse Analytics (formerly Azure SQL Data Warehouse) is a limitless analytics service that brings together enterprise data warehousing and big data analytics. You can query data on your terms by using either serverless or provisioned resources at scale. You have a unified experience to ingest, prepare, manage, and serve data for immediate business intelligence and machine learning needs.
+
+## Azure HDInsight
+Azure HDInsight is a fully managed, open-source analytics service for enterprises. It's a cloud service that makes it easier, faster, and more cost-effective to process massive amounts of data. You can run popular open-source frameworks and create cluster types such as Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm, and Machine Learning Services. HDInsight also supports a broad range of scenarios such as extraction, transformation, and loading (ETL), data warehousing, machine learning, and IoT.
+
+## Azure Databricks
+Azure Databricks helps you unlock insights from all your data and build artificial intelligence solutions. You can set up your Apache Spark environment in minutes, and then autoscale and collaborate on shared projects in an interactive workspace. Azure Databricks supports Python, Scala, R, Java, and SQL, as well as data science frameworks and libraries including TensorFlow, PyTorch, and scikit-learn.
+
+## Azure Data Lake Analytics
+Azure Data Lake Analytics is an on-demand analytics job service that simplifies big data. Instead of deploying, configuring, and tuning hardware, you write queries to transform your data and extract valuable insights. The analytics service can handle jobs of any scale instantly by setting the dial for how much power you need. You only pay for your job when it's running, making it more cost-effective.
 
 
