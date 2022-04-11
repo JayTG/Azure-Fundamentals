@@ -891,4 +891,5 @@ Like Azure SQL Database, Azure SQL Managed Instance is a platform as a service d
 ### Migration
 Azure SQL Managed Instance makes it easy to migrate your on-premises data on SQL Server to the cloud using the Azure Database Migration Service (DMS) or native backup and restore. After you have discovered all of the features that your company uses, you need to assess which on-premises SQL Server instances you can migrate to Azure SQL Managed Instance to see if you have any blocking issues. Once you have resolved any issues, you can migrate your data, then cutover from your on-premises SQL Server to your Azure SQL Managed Instance by changing the connection string in your applications.
 
+![migration-process-flow-small-a899c59c](https://user-images.githubusercontent.com/87706066/162716428-763cd6bb-079a-4871-b5f9-e281c30a98c6.png)
 
