@@ -118,6 +118,39 @@
   - [Azure HDInsight](#azure-hdinsight)
   - [Azure Databricks](#azure-databricks)
   - [Azure Data Lake Analytics](#azure-data-lake-analytics)
+- [Part 3: Describe core solutions and management tools on Azure](#part-3-describe-core-solutions-and-management-tools-on-azure)
+  - [Identify the product options](#identify-the-product-options)
+  - [Azure IoT Hub](#azure-iot-hub)
+  - [Azure IoT Central](#azure-iot-central)
+  - [Azure Sphere](#azure-sphere)
+  - [Analyze the decision criteria](#analyze-the-decision-criteria)
+    - [Is it critical to ensure that the device is not compromised?](#is-it-critical-to-ensure-that-the-device-is-not-compromised)
+    - [Do I need a dashboard for reporting and management?](#do-i-need-a-dashboard-for-reporting-and-management)
+  - [Use IoT Hub](#use-iot-hub)
+    - [Which service should you choose?](#which-service-should-you-choose)
+    - [Why not use Azure IoT Central?](#why-not-use-azure-iot-central)
+    - [Why not use Azure Sphere?](#why-not-use-azure-sphere)
+  - [Azure product options](#azure-product-options)
+    - [Azure Machine Learning](#azure-machine-learning)
+  - [Azure Cognitive Services](#azure-cognitive-services)
+  - [Azure Bot Service](#azure-bot-service)
+  - [Are you building a virtual agent that interfaces with humans via natural language?](#are-you-building-a-virtual-agent-that-interfaces-with-humans-via-natural-language)
+  - [Do you need a service that can understand the content and meaning of images, video, or audio, or that can translate text into a different language?](#do-you-need-a-service-that-can-understand-the-content-and-meaning-of-images-video-or-audio-or-that-can-translate-text-into-a-different-language)
+  - [Do you need to predict user behavior or provide users with personalized recommendations in your app?](#do-you-need-to-predict-user-behavior-or-provide-users-with-personalized-recommendations-in-your-app)
+  - [Will your app predict future outcomes based on private historical data?](#will-your-app-predict-future-outcomes-based-on-private-historical-data)
+  - [Do you need to build a model by using your own data or perform a different task than those listed above?](#do-you-need-to-build-a-model-by-using-your-own-data-or-perform-a-different-task-than-those-listed-above)
+    - [Do you need to perform an orchestration across well-known APIs?](#do-you-need-to-perform-an-orchestration-across-well-known-apis)
+    - [Do you need to execute custom algorithms or perform specialized data parsing and data lookups?](#do-you-need-to-execute-custom-algorithms-or-perform-specialized-data-parsing-and-data-lookups)
+    - [Do you have existing automated tasks written in an imperative programming language?](#do-you-have-existing-automated-tasks-written-in-an-imperative-programming-language)
+    - [Do you prefer a visual (declarative) workflow or writing (imperative) code?](#do-you-prefer-a-visual-declarative-workflow-or-writing-imperative-code)
+  - [Azure DevOps Services](#azure-devops-services)
+  - [GitHub and GitHub Actions](#github-and-github-actions)
+  - [Azure DevTest Labs](#azure-devtest-labs)
+    - [Do you need to automate and manage test-lab creation?](#do-you-need-to-automate-and-manage-test-lab-creation)
+    - [Are you building open-source software?](#are-you-building-open-source-software)
+    - [Regarding source-code management and DevOps tools, what level of granularity do you need for permissions?](#regarding-source-code-management-and-devops-tools-what-level-of-granularity-do-you-need-for-permissions)
+    - [Regarding source-code management and DevOps tools, how sophisticated does your project management and reporting need to be?](#regarding-source-code-management-and-devops-tools-how-sophisticated-does-your-project-management-and-reporting-need-to-be)
+    - [Regarding source-code management and DevOps tools, how tightly do you need to integrate with third-party tools?](#regarding-source-code-management-and-devops-tools-how-tightly-do-you-need-to-integrate-with-third-party-tools)
 
 # Part 1: Describe core Azure concepts
   
@@ -907,5 +940,187 @@ Azure Databricks helps you unlock insights from all your data and build artifici
 
 ## Azure Data Lake Analytics
 Azure Data Lake Analytics is an on-demand analytics job service that simplifies big data. Instead of deploying, configuring, and tuning hardware, you write queries to transform your data and extract valuable insights. The analytics service can handle jobs of any scale instantly by setting the dial for how much power you need. You only pay for your job when it's running, making it more cost-effective.
+
+---
+
+# Part 3: Describe core solutions and management tools on Azure
+
+## Identify the product options
+IoT enables devices to gather and then relay information for data analysis. Smart devices are equipped with sensors that collect data. A few common sensors that measure attributes of the physical world include:
+
+- Environmental sensors that capture temperature and humidity levels.
+- Barcode, QR code, or optical character recognition (OCR) scanners.
+- Geo-location and proximity sensors.
+- Light, color, and infrared sensors.
+- Sound and ultrasonic sensors.
+- Motion and touch sensors.
+- Accelerometer and tilt sensors.
+- Smoke, gas, and alcohol sensors.
+- Error sensors to detect when there's a problem with the device.
+- Mechanical sensors that detect anomalies or deformations.
+- Flow, level, and pressure sensors for measuring gasses and liquids.
+
+By using Azure IoT services, devices that are equipped with these kinds of sensors and that can connect to the internet could send their sensor readings to a specific endpoint in Azure via a message. The message's data is then collected and aggregated, and it can be converted into reports and alerts. Alternately, all devices could be updated with new firmware to fix issues or add new functionality by sending software updates from Azure IoT services to each device.
+
+## Azure IoT Hub
+Azure IoT Hub is a managed service that's hosted in the cloud and that acts as a central message hub for bi-directional communication between your IoT application and the devices it manages. The IoT Hub service supports communications both from the device to the cloud and from the cloud to the device. From a cloud-to-device perspective, IoT Hub allows for command and control. That is, you can have either manual or automated remote control of connected devices, so you can instruct the device to open valves, set target temperatures, restart stuck devices, and so on.
+
+
+## Azure IoT Central
+Azure IoT Central builds on top of IoT Hub by adding a dashboard that allows you to connect, monitor, and manage your IoT devices. You can watch the overall performance across all devices in aggregate, and you can set up alerts that send notifications when a specific device needs maintenance. To help you get up and running quickly, IoT Central provides starter templates for common scenarios across various industries, such as retail, energy, healthcare, and government. You then customize the design starter templates directly in the UI by choosing from existing themes or creating your own custom theme, setting the logo, and so on.
+
+## Azure Sphere
+Azure Sphere creates an end-to-end, highly secure IoT solution for customers that encompasses everything from the hardware and operating system on the device to the secure method of sending messages from the device to the message hub. Azure Sphere has built-in communication and security features for internet-connected devices.
+
+Azure Sphere comes in three parts:
+
+- The first part is the Azure Sphere micro-controller unit (MCU), which is responsible for processing the operating system and signals from attached sensors. The following image displays the Seeed Azure Sphere MT3620 Development Kit MCU, one of several different starter kits that are available for prototyping and developing Azure Sphere applications.
+- The second part is a customized Linux operating system (OS) that handles communication with the security service and can run the vendor's software.
+- The third part is Azure Sphere Security Service, also known as AS3. Its job is to make sure that the device has not been maliciously compromised. When the device attempts to connect to Azure, it first must authenticate itself, per device, which it does by using certificate-based authentication. If it authenticates successfully, AS3 checks to ensure that the device hasn't been tampered with. After it has established a secure channel of communication, AS3 pushes any OS or approved customer-developed software updates to the device.
+
+After the Azure Sphere system has validated the authenticity of the device and authenticated it, the device can interact with other Azure IoT services by sending telemetry and error information.
+
+## Analyze the decision criteria
+
+### Is it critical to ensure that the device is not compromised?
+
+As we mentioned in the previous unit, Azure Sphere ensures a secure channel of communication between the device and Azure by controlling everything from the hardware to the operating system and the authentication process. This ensures that the integrity of the device is uncompromised. After a secure channel is established, messages can be received from the device securely, and messages or software updates can be sent to the device remotely.
+
+### Do I need a dashboard for reporting and management?
+Your next decision will be the level of services you require from your IoT solution. If you merely want to connect to your remote devices to receive telemetry and occasionally push updates, and you don't need any reporting capabilities, you might prefer to implement Azure IoT Hub by itself. However, if you want a pre-built customizable user interface with which you can view and control your devices remotely, you might prefer to start with IoT Central. The dashboard is based on starter templates for common industry and usage scenarios. You can use the dashboard that's generated by the starter template as is or customize it to suit your needs.
+
+
+## Use IoT Hub
+To build a strong brand reputation, devices send telemetry information to a centralized location where the data can be analyzed and maintenance can be scheduled. They will only submit their telemetry data for analysis and active maintenance. Since Tailwind Traders already has software to manage equipment maintenance requirements, the company wanted to integrate all functions into this existing system.
+
+### Which service should you choose?
+Let's apply the decision criteria from the previous unit. It might not warrant the extra expense or engineering resources that would be required to employ Azure Sphere. In this case, Azure IoT Central is not required. So, given the responses to the decision criteria, Azure IoT Hub is the best choice in this scenario.
+
+### Why not use Azure IoT Central?
+Azure IoT Central provides a dashboard that allows companies to manage IoT devices individually and an aggregate, view reports, and set up error notifications via a GUI. But, in this scenario, Tailwind Traders wants to integrate the telemetry it collects and other analysis functionality into an existing software application. Furthermore, the company's appliances will be collecting data via sensors only and don't need the ability to update settings or software remotely. Therefore, the company doesn't need Azure IoT Central.
+
+### Why not use Azure Sphere?
+Azure Sphere provides a complete solution for scenarios where security is critical. In this scenario, security is preferred but not critical. The appliances can't be updated with new software remotely. The sensors merely report usage data. As a result, Azure Sphere isn't necessary.
+
+---
+
+## Azure product options
+At a high level, there are three primary product offerings from Microsoft, each of which is designed for a specific audience and use case. Each option provides a diverse set of tools, services, and programmatic APIs. In this module, we'll merely scratch the surface of the options' capabilities.
+
+### Azure Machine Learning
+Azure Machine Learning is a platform for making predictions. It consists of tools and services that allow you to connect to data to train and test models to find one that will most accurately predict a future result. After you've run experiments to test the model, you can deploy and use it in real time via a web API endpoint.
+
+With Azure Machine Learning, you can:
+
+- Create a process that defines how to obtain data, how to handle missing or bad data, how to split the data into either a training set or test set, and deliver the data to the training process.
+- Train and evaluate predictive models by using tools and programming languages familiar to data scientists.
+- Create pipelines that define where and when to run the compute-intensive experiments that are required to score the algorithms based on the training and test data.
+- Deploy the best-performing algorithm as an API to an endpoint so it can be consumed in real time by other applications.
+
+Choose Azure Machine Learning when your data scientists need complete control over the design and training of an algorithm using your own data. The following video discusses the basic steps required to set up a machine learning system.
+
+## Azure Cognitive Services
+Azure Cognitive Services provides prebuilt machine learning models that enable applications to see, hear, speak, understand, and even begin to reason. Use Azure Cognitive Services to solve general problems, such as analyzing text for emotional sentiment or analyzing images to recognize objects or faces. You don't need special machine learning or data science knowledge to use these services. Developers access Azure Cognitive Services via APIs and can easily include these features in just a few lines of code.
+
+While Azure Machine Learning requires you to bring your own data and train models over that data, Azure Cognitive Services, for the most part, provides pretrained models so that you can bring in your live data to get predictions on.
+
+Azure Cognitive Services can be divided into the following categories:
+
+- Language services: Allow your apps to process natural language with prebuilt scripts, evaluate sentiment, and learn how to recognize what users want.
+- Speech services: Convert speech into text and text into natural-sounding speech. Translate from one language to another and enable speaker verification and recognition.
+- Vision services: Add recognition and identification capabilities when you're analyzing pictures, videos, and other visual content.
+- Decision services: Add personalized recommendations for each user that automatically improve each time they're used, moderate content to monitor and remove offensive or risky content, and detect abnormalities in your time series data.
+
+## Azure Bot Service
+ Azure Bot Service is a bit different from Azure Machine Learning and Azure Cognitive Services in that it has a specific use case. Behind the scenes, the bot you build uses other Azure services, such as Azure Cognitive Services, to understand what their human counterparts are asking for. A bot interaction can be a quick question and answer, or it can be a sophisticated conversation that intelligently provides access to services.
+
+## Are you building a virtual agent that interfaces with humans via natural language?
+
+Use Azure Bot Service when you need to create a virtual agent to interact with humans by using natural language. Bot Service integrates knowledge sources, natural language processing, and form factors to allow interaction across different channels. Bot Service solutions usually rely on other AI services for such things as natural language understanding or even translation for localizing replies into a customer's preferred language.
+
+## Do you need a service that can understand the content and meaning of images, video, or audio, or that can translate text into a different language?
+
+Use Azure Cognitive Services when it comes to general purpose tasks, such as performing speech to text, integrating with search, or identifying the objects in an image. Azure Cognitive Services is general purpose, meaning that many different kinds of customers can benefit from the work that Microsoft has already done to train and test these models and offer them inexpensively at scale.
+
+## Do you need to predict user behavior or provide users with personalized recommendations in your app?
+The Azure Cognitive Services Personalizer service watches your users' actions within an application. You can use Personalizer to predict their behavior and provide relevant experiences as it identifies usage patterns. Here again, you could capture and store user behavior and create your own custom Azure Machine Learning solution to do these things, but this approach would require much effort and expense.
+
+## Will your app predict future outcomes based on private historical data?
+
+Choose Azure Machine Learning when you need to analyze data to predict future outcomes. For example, suppose you need to analyze years' worth of financial transactions to discover new patterns that could help you create new products and services for your company's clients and then offer those new services during routine customer service calls. When you're working with proprietary data, you'll likely need to build a more custom-tailored machine learning model.
+
+## Do you need to build a model by using your own data or perform a different task than those listed above?
+
+Use Azure Machine Learning for maximum flexibility. Data scientists and AI engineers can use the tools they're familiar with and the data you provide to develop deep learning and machine learning models that are tuned for your 
+particular requirements.
+
+---
+
+### Do you need to perform an orchestration across well-known APIs?
+As we noted previously, Azure Logic Apps was designed with orchestration in mind, from the web-based visual configurator to the pricing model. Logic Apps excels at connecting a large array of disparate services via their APIs to pass and process data through many steps in a workflow.
+It's possible to create the same workflow by using Azure Functions, but it might take a considerable amount of time to research which APIs to call and how to call them.
+
+### Do you need to execute custom algorithms or perform specialized data parsing and data lookups?
+With Azure Functions, you can use the full expressiveness of a programming language in a compact form. This lets you concisely build complex algorithms, or data lookup and parsing operations. You would be responsible for maintaining the code, handling exceptions resiliently, and so on.
+
+Although Azure Logic Apps can perform logic (loops, decisions, and so on), if you have a logic-intensive orchestration that requires a complex algorithm, implementing that algorithm might be more verbose and visually overwhelming.
+
+### Do you have existing automated tasks written in an imperative programming language?
+
+If you already have your orchestration or business logic expressed in C#, Java, Python, or another popular programming language, it might be easier to port your code into the body of an Azure Functions function app than to re-create it by using Azure Logic Apps.
+
+### Do you prefer a visual (declarative) workflow or writing (imperative) code?
+
+Ultimately, your choice comes down to whether you prefer to work in a declarative environment or an imperative environment. Developers who have expertise in an imperative programming language might prefer to think about automation and orchestration from an imperative mindset. IT professionals and business analysts might prefer to work in a more visual low-code/no-code (declarative) environment.
+
+---
+## Azure DevOps Services
+Azure DevOps Services is a suite of services that address every stage of the software development lifecycle.
+
+- Azure Repos is a centralized source-code repository where software development, DevOps engineering, and documentation professionals can publish their code for review and collaboration.
+- Azure Boards is an agile project management suite that includes Kanban boards, reporting, and tracking ideas and work from high-level epics to work items and issues.
+- Azure Pipelines is a CI/CD pipeline automation tool.
+- Azure Artifacts is a repository for hosting artifacts, such as compiled source code, which can be fed into testing or deployment pipeline steps.
+- Azure Test Plans is an automated test tool that can be used in a CI/CD pipeline to ensure quality before a software release.
+
+## GitHub and GitHub Actions
+GitHub is arguably the world's most popular code repository for open-source software. Git is a decentralized source-code management tool, and GitHub is a hosted version of Git that serves as the primary remote. GitHub builds on top of Git to provide related services for coordinating work, reporting and discussing issues, providing documentation, and more. It offers the following functionality:
+
+- It's a shared source-code repository, including tools that enable developers to perform code reviews by adding comments and questions in a web view of the source code before it can be merged into the main code base.
+- It facilitates project management, including Kanban boards.
+- It supports issue reporting, discussion, and tracking.
+- It features CI/CD pipeline automation tooling.
+- It includes a wiki for collaborative documentation.
+- It can be run from the cloud or on-premises
+
+With such similarity between many GitHub and Azure DevOps features, you might wonder which product to choose for your organization. Although both Azure DevOps and GitHub allow public and private code repositories, GitHub has a long history with public repositories and is trusted by tens of thousands of open-source project owners. GitHub is a lighter-weight tool than Azure DevOps, with a focus on individual developers contributing to the open-source code. Azure DevOps, on the other hand, is more focused on enterprise development, with heavier project-management and planning tools, and finer-grained access control.
+
+## Azure DevTest Labs
+Azure DevTest Labs provides an automated means of managing the process of building, setting up, and tearing down virtual machines that contain builds of your software projects. Anything you can deploy in Azure via an ARM template can be provisioned through DevTest Labs. Provisioning pre-created lab environments with their required configurations and tools already installed is a huge time saver for quality assurance professionals and developers.
+Azure DevTest Labs can set up everything automatically upon request. After the testing is complete, DevTest Labs can shut down and deprovision the VM, which saves money when it's not in use.
+
+### Do you need to automate and manage test-lab creation?
+If your aim is to automate the creation and management of a test lab environment, consider choosing Azure DevTest Labs. Among the three tools and services we've described, it's the only one that offers this functionality.
+
+However, you can automate the provisioning of new labs as part of a toolchain by using Azure Pipelines or GitHub Actions.
+
+### Are you building open-source software?
+Although Azure DevOps can publish public code repositories, GitHub has long been the preferred host for open-source software. If you're building open-source software, you would likely choose GitHub if for no other reasons than its visibility and general acceptance by the open-source development community.
+
+The remaining decision criteria are specific to choosing between either Azure DevOps or GitHub.
+
+### Regarding source-code management and DevOps tools, what level of granularity do you need for permissions?
+
+GitHub works on a simple model of read/write permissions to every feature. Meanwhile, Azure DevOps has a much more granular set of permissions that allow organizations to refine who is able to perform most operations across the entire toolset.
+
+### Regarding source-code management and DevOps tools, how sophisticated does your project management and reporting need to be?
+
+Although GitHub has work items, issues, and a Kanban board, project management and reporting is the area where Azure DevOps excels. Azure DevOps is highly customizable, which allows an administrator to add custom fields to capture metadata and other information alongside each work item. By contrast, the GitHub Issues feature uses tags as its primary means of helping a team categorize issues.
+
+### Regarding source-code management and DevOps tools, how tightly do you need to integrate with third-party tools?
+
+lthough we make no specific recommendations about third-party tools, it's important for you to understand your organization's existing investments in tools and services and to evaluate how these dependencies might affect your choice. It's likely that most vendors that create DevOps tools create hooks or APIs that can be used by both Azure Pipelines and GitHub Actions. Even so, it's probably worth the effort to validate that assumption.
+
+--- 
 
 
