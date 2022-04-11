@@ -159,6 +159,10 @@
     - [Do you need to perform one-off management, administrative, or reporting actions?](#do-you-need-to-perform-one-off-management-administrative-or-reporting-actions)
     - [Do you need a way to repeatedly set up one or more resources and ensure that all the dependencies are created in the proper order?](#do-you-need-a-way-to-repeatedly-set-up-one-or-more-resources-and-ensure-that-all-the-dependencies-are-created-in-the-proper-order)
     - [When you're scripting, do you come from a Windows administration or Linux administration background?](#when-youre-scripting-do-you-come-from-a-windows-administration-or-linux-administration-background)
+  - [Identify your product options](#identify-your-product-options)
+  - [Azure Advisor](#azure-advisor)
+  - [Azure Monitor](#azure-monitor)
+  - [Azure Service Health](#azure-service-health)
 
 # Part 1: Describe core Azure concepts
   
@@ -1182,5 +1186,60 @@ By contrast, it's entirely possible to use either PowerShell or the Azure CLI to
 If you or your cloud administrators come from a Windows administration background, it's likely you'll prefer PowerShell. If you or your cloud administrators come from a Linux administration background, it's likely you'll prefer the Azure CLI. In practice, either tool can be used to perform most one-off administration tasks.
 
 ---
+## Identify your product options
+Several basic questions or concerns face all companies that use the cloud.
+
+- Are we using the cloud correctly? Can we squeeze more performance out of our cloud spend?
+- Are we spending more than we need to?
+- Do we have our systems properly secured?
+- How resilient are our resources? If we experience a regional outage, could we fail over to another region?
+- How can we diagnose and fix issues that occur intermittently?
+- How can we quickly determine the cause of an outage?
+- How can we learn about planned downtime?
+
+Fortunately, by using a combination of monitoring solutions on Azure, you can:
+
+- Gain answers, insights, and alerts to help ensure that you've optimized your cloud usage.
+- Ascertain the root cause of unplanned issues.
+- Prepare ahead of time for planned outages.
+
+## Azure Advisor
+Azure Advisor evaluates your Azure resources and makes recommendations to help improve reliability, security, and performance, achieve operational excellence, and reduce costs. Advisor is designed to help you save time on cloud optimization. The recommendation service includes suggested actions you can take right away, postpone, or dismiss.
+
+The recommendations are available via the Azure portal and the API, and you can set up notifications to alert you to new recommendations.
+
+When you're in the Azure portal, the Advisor dashboard displays personalized recommendations for all your subscriptions, and you can use filters to select recommendations for specific subscriptions, resource groups, or services. The recommendations are divided into five categories:
+
+- Reliability: Used to ensure and improve the continuity of your business-critical applications.
+- Security: Used to detect threats and vulnerabilities that might lead to security breaches.
+- Performance: Used to improve the speed of your applications.
+- Cost: Used to optimize and reduce your overall Azure spending.
+- Operational Excellence: Used to help you achieve process and workflow efficiency, resource manageability, and deployment best practices.
+
+## Azure Monitor
+Azure Monitor is a platform for collecting, analyzing, visualizing, and potentially taking action based on the metric and logging data from your entire Azure and on-premises environment.
+
+The following diagram illustrates just how comprehensive Azure Monitor is.
+
+- On the left is a list of the sources of logging and metric data that can be collected at every layer in your application architecture, from application to operating system and network.
+
+- In the center, you can see how the logging and metric data is stored in central repositories.
+
+- On the right, the data is used in a number of ways. You can view real-time and historical performance across each layer of your architecture, or aggregated and detailed information. The data is displayed at different levels for different audiences. You can view high-level reports on the Azure Monitor Dashboard or create custom views by using Power BI and Kusto queries.
+
+## Azure Service Health
+
+Azure Service Health provides a personalized view of the health of the Azure services, regions, and resources you rely on. The status.azure.com website, which displays only major issues that broadly affect Azure customers, doesn't provide the full picture. But Azure Service Health displays both major and smaller, localized issues that affect you. Service issues are rare, but it's important to be prepared for the unexpected. You can set up alerts that help you triage outages and planned maintenance. After an outage, Service Health provides official incident reports, called root cause analyses (RCAs), which you can share with stakeholders.
+
+Service Health helps you keep an eye on several event types:
+
+- Service issues are problems in Azure, such as outages, that affect you right now. You can drill down to the affected services, regions, updates from your engineering teams, and find ways to share and track the latest information.
+
+- Planned maintenance events can affect your availability. You can drill down to the affected services, regions, and details to show how an event will affect you and what you need to do. Most of these events occur without any impact to you and aren't shown here. In the rare case that a reboot is required, Service Health allows you to choose when to perform the maintenance to minimize the downtime.
+
+- Health advisories are issues that require you to act to avoid service interruption, including service retirements and breaking changes. Health advisories are announced far in advance to allow you to plan.
+
+
+
 
 
