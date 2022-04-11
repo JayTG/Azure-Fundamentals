@@ -103,6 +103,7 @@
   - [Azure Blob storage fundamentals](#azure-blob-storage-fundamentals)
   - [Azure Files fundamentals](#azure-files-fundamentals)
   - [Understand Blob access tiers](#understand-blob-access-tiers)
+  - [Azure Cosmos DB](#azure-cosmos-db)
 
 # Part 1: Describe core Azure concepts
   
@@ -801,3 +802,10 @@ The following illustration demonstrates choosing between the hot and cool access
 ![account-tier-42ec76d7](https://user-images.githubusercontent.com/87706066/162456217-4cf88be3-65ec-40ac-a220-c5c2ecce5c04.png)
 
 ---
+## Azure Cosmos DB
+A long-term plan might be to eventually move all disparate data to a common database service. You can take advantage of fast single-digit millisecond data access using one of many popular APIs. You can use this feature to store data updated and maintained by users around the world. Tailwind Traders developers maintain and update data.
+
+The following illustration shows an example Azure Cosmos DB database used to store data for the Tailwind Traders Learning Portal website. 
+
+
+Azure Cosmos DB is flexible. At the lowest level, Azure Cosmos DB stores data in atom-record-sequence (ARS) format. The data is then abstracted and projected as an API, which you specify when you're creating your database. Your choices include SQL, MongoDB, Cassandra, Tables, and Gremlin. This level of flexibility means that as you migrate your company's databases to Azure Cosmos DB, your developers can stick with the API that they're the most comfortable with.
