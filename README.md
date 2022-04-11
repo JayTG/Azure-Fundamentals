@@ -104,6 +104,9 @@
   - [Azure Files fundamentals](#azure-files-fundamentals)
   - [Understand Blob access tiers](#understand-blob-access-tiers)
   - [Azure Cosmos DB](#azure-cosmos-db)
+  - [Azure SQL Database](#azure-sql-database)
+    - [Features](#features)
+    - [Migration](#migration)
 
 # Part 1: Describe core Azure concepts
   
@@ -812,3 +815,14 @@ The following illustration shows an example Azure Cosmos DB database used to sto
 
 Azure Cosmos DB is flexible. At the lowest level, Azure Cosmos DB stores data in atom-record-sequence (ARS) format. The data is then abstracted and projected as an API, which you specify when you're creating your database. Your choices include SQL, MongoDB, Cassandra, Tables, and Gremlin. This level of flexibility means that as you migrate your company's databases to Azure Cosmos DB, your developers can stick with the API that they're the most comfortable with.
 
+## Azure SQL Database
+Azure SQL Database is a relational database based on the latest stable version of the Microsoft SQL Server database engine. SQL Database is a high-performance, reliable, fully managed, and secure database. You can use it to build data-driven applications and websites in the programming language of your choice, without needing to manage infrastructure.
+
+### Features 
+Azure SQL Database is a platform as a service database engine. It handles most of the database management functions, such as upgrades, patches, backups, and monitoring, without the need for user involvement. SQL Database is a fully managed service with high availability, backups and other routine maintenance operations built in. Microsoft handles all updates to SQL and operating system code. A SQL database can be the right choice for many modern cloud applications because it allows you to handle both relational and non-relational structured data, such as graphs, JSON, spatial and XML.
+You can use advanced query processing features, such as high performance, in-memory technology, and intelligent query processing. 
+
+### Migration
+Tailwind Traders currently uses several on-premises servers running SQL Server, which provide data storage for your public-facing website . In addition, your on-premises servers running SQL Server also provide data storage for your internal-only training portal website. Tailwind Traders uses the website for new employee training materials .
+
+You can migrate your existing SQL Server databases with minimal downtime by using the Azure Database Migration Service. The Microsoft Data Migration Assistant can generate assessment reports that provide recommendations to help guide you through required changes prior to performing a migration. After you assess and resolve any remediation required, you're ready to begin the migration process. The Azure Database Migration Service performs all of the required steps. You just change the connection string in your apps.
