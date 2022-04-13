@@ -170,6 +170,8 @@
 - [Part 4: Describe general security and network security features](#part-4-describe-general-security-and-network-security-features)
   - [What is Azure Security Center?](#what-is-azure-security-center)
   - [What is secure score?](#what-is-secure-score)
+  - [Protect against threats](#protect-against-threats)
+  - [Respond to security alerts](#respond-to-security-alerts)
 
 # Part 1: Describe core Azure concepts
   
@@ -1299,3 +1301,16 @@ Secure score helps you:
 Report on the current state of your organization's security posture.
 Improve your security posture by providing discoverability, visibility, guidance, and control.
 Compare with benchmarks and establish key performance indicators (KPIs).
+
+## Protect against threats
+Security Center includes advanced cloud defense capabilities for VMs, network security, and file integrity. Let's look at how some of these capabilities apply to Tailwind Traders.
+
+- **Just-in-time VM access** Tailwind Traders will configure just-in-time access to VMs. This access blocks traffic by default to specific network ports of VMs, but allows traffic for a specified time when an admin requests and approves it.
+- **Adaptive application controls** Tailwind Traders can control which applications are allowed to run on its VMs. In the background, Security Center uses machine learning to look at the processes running on a VM. It creates exception rules for each resource group that holds the VMs and provides recommendations. This process provides alerts that inform the company about unauthorized applications that are running on its VMs.
+- **Adaptive network hardening** Security Center can monitor the internet traffic patterns of the VMs, and compare those patterns with the company's current network security group (NSG) settings. From there, Security Center can make recommendations about whether the NSGs should be locked down further and provide remediation steps.
+- **File integrity monitoring** Tailwind Traders can also configure the monitoring of changes to important files on both Windows and Linux, registry settings, applications, and other aspects that might indicate a security attack.
+
+## Respond to security alerts
+Tailwind Traders can use Security Center to get a centralized view of all of its security alerts. From there, the company can dismiss false alerts, investigate them further, remediate alerts manually, or use an automated response with a workflow automation.
+
+Workflow automation uses Azure Logic Apps and Security Center connectors. The logic app can be triggered by a threat detection alert or by a Security Center recommendation, filtered by name or by severity. You can then configure the logic app to run an action, such as sending an email, or posting a message to a Microsoft Teams channel.
