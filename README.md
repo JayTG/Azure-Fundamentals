@@ -1680,7 +1680,7 @@ Authentication establishes the user's identity, but authorization is the process
 
 Here's a diagram that shows the relationship between authentication and authorization:
 
-
+![2-id-card-access](https://user-images.githubusercontent.com/87706066/163201633-dd0ae601-c8c0-4d33-9549-2c559f06654a.png)
 
 The identification card represents credentials that the user has to prove their identity (you'll learn more about the types of credentials later in this module.) Once authenticated, authorization defines what kinds of applications, resources, and data that user can access.
 
@@ -1739,3 +1739,7 @@ If an identity is overlooked, this might allow access when it should have been e
 There are a few ways to connect your existing Active Directory installation with Azure AD. Perhaps the most popular method is to use Azure AD Connect. Azure AD Connect synchronizes user identities between on-premises Active Directory and Azure AD.
 
 Here's a diagram that shows how Azure AD Connect fits between on-premises Active Directory and Azure AD:
+
+![3-azure-active-directory](https://user-images.githubusercontent.com/87706066/163201558-0f209e56-205c-4941-acd8-e60b750c297f.png)
+
+
