@@ -235,8 +235,8 @@
   - [How does Azure Policy define policies?](#how-does-azure-policy-define-policies)
   - [Azure Policy in action](#azure-policy-in-action)
     - [Task 1. Create a policy definition](#task-1-create-a-policy-definition)
-  - [Task 2. Assign the definition to resources](#task-2-assign-the-definition-to-resources)
-  - [Task 3. Review the evaluation results](#task-3-review-the-evaluation-results)
+    - [Task 2. Assign the definition to resources](#task-2-assign-the-definition-to-resources)
+    - [Task 3. Review the evaluation results](#task-3-review-the-evaluation-results)
   - [What are Azure Policy initiatives?](#what-are-azure-policy-initiatives)
   - [Govern multiple subscriptions by using Azure Blueprints](#govern-multiple-subscriptions-by-using-azure-blueprints)
   - [Azure Blueprints in action](#azure-blueprints-in-action)
@@ -1992,12 +1992,12 @@ Every policy definition has conditions under which it's enforced. A policy defin
 - **CORS should not allow every resource to access your web applications** Cross-origin resource sharing (CORS) is an HTTP feature that enables a web application running under one domain to access resources in another domain. For security reasons, modern web browsers restrict cross-site scripting by default. This policy allows only required domains to interact with your web app.
 - **System updates should be installed on your machines** This policy enables Azure Security Center to recommend missing security system updates on your servers.
 
-## Task 2. Assign the definition to resources
+### Task 2. Assign the definition to resources
 To implement your policy definitions, you assign definitions to resources. A policy assignment is a policy definition that takes place within a specific scope. This scope could be a management group (a collection of multiple subscriptions), a single subscription, or a resource group.
 
 Policy assignments are inherited by all child resources within that scope. If a policy is applied to a resource group, that policy is applied to all resources within that resource group. You can exclude a subscope from the policy assignment if there are specific child resources you need to be exempt from the policy assignment.
 
-## Task 3. Review the evaluation results
+### Task 3. Review the evaluation results
 When a condition is evaluated against your existing resources, each resource is marked as compliant or noncompliant. You can review the noncompliant policy results and take any action that's needed.
 
 Policy evaluation happens about once per hour. If you make changes to your policy definition and create a policy assignment, that policy is evaluated over your resources within the hour.
