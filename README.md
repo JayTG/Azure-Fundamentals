@@ -172,6 +172,11 @@
   - [What is secure score?](#what-is-secure-score)
   - [Protect against threats](#protect-against-threats)
   - [Respond to security alerts](#respond-to-security-alerts)
+  - [Azure Sentinel capabilities](#azure-sentinel-capabilities)
+  - [Connect your data sources](#connect-your-data-sources)
+  - [Detect threats](#detect-threats)
+  - [Investigate and respond](#investigate-and-respond)
+  
 
 # Part 1: Describe core Azure concepts
   
@@ -1314,3 +1319,42 @@ Security Center includes advanced cloud defense capabilities for VMs, network se
 Tailwind Traders can use Security Center to get a centralized view of all of its security alerts. From there, the company can dismiss false alerts, investigate them further, remediate alerts manually, or use an automated response with a workflow automation.
 
 Workflow automation uses Azure Logic Apps and Security Center connectors. The logic app can be triggered by a threat detection alert or by a Security Center recommendation, filtered by name or by severity. You can then configure the logic app to run an action, such as sending an email, or posting a message to a Microsoft Teams channel.
+
+## Azure Sentinel capabilities
+Azure Sentinel enables you to:
+
+- Collect cloud data at scale Collect data across all users, devices, applications, and infrastructure, both on-premises and from multiple clouds.
+- Detect previously undetected threats Minimize false positives by using Microsoft's comprehensive analytics and threat intelligence.
+- Investigate threats with artificial intelligence Examine suspicious activities at scale, tapping into years of cybersecurity experience from Microsoft.
+- Respond to incidents rapidly Use built-in orchestration and automation of common tasks.
+
+## Connect your data sources
+Azure Sentinel supports a number of data sources, which it can analyze for security events. These connections are handled by built-in connectors or industry-standard log formats and APIs.
+
+- Connect Microsoft solutions Connectors provide real-time integration for services like Microsoft Threat Protection solutions, Microsoft 365 sources (including Office 365), Azure Active Directory, and Windows Defender Firewall.
+- Connect other services and solutions Connectors are available for common non-Microsoft services and solutions, including AWS CloudTrail, Citrix Analytics (Security), Sophos XG Firewall, VMware Carbon Black Cloud, and Okta SSO.
+- Connect industry-standard data sources Azure Sentinel supports data from other sources that use the Common Event Format (CEF) messaging standard, Syslog, or REST API.
+
+## Detect threats
+**Built in analytics** use templates designed by Microsoft's team of security experts and analysts based on known threats, common attack vectors, and escalation chains for suspicious activity. These templates can be customized and search across the environment for any activity that looks suspicious. Some templates use machine learning behavioral analytics that are based on Microsoft proprietary algorithms.
+
+**Custom analytics** are rules that you create to search for specific criteria within your environment. You can preview the number of results that the query would generate (based on past log events) and set a schedule for the query to run. You can also set an alert threshold.
+
+## Investigate and respond
+
+When Azure Sentinel detects suspicious events, Tailwind Traders can investigate specific alerts or incidents (a group of related alerts). With the investigation graph, the company can review information from entities directly connected to the alert, and see common exploration queries to help guide the investigation.
+
+Here's an example that shows what an investigation graph looks like in Azure Sentinel.
+![3-investigate-incidents-54765923](https://user-images.githubusercontent.com/87706066/163166414-a61b4bfe-bcab-423a-a66b-c1f3904d2ea6.png)
+
+The company will also use Azure Monitor Workbooks to automate responses to threats. For example, it can set an alert that looks for malicious IP addresses that access the network and create a workbook that does the following steps:
+
+1. When the alert is triggered, open a ticket in the IT ticketing system.
+2. Send a message to the security operations channel in Microsoft Teams or Slack to make sure the security analysts are aware of the incident.
+3. Send all of the information in the alert to the senior network admin and to the security admin. The email message includes two user option buttons: **Block** or **Ignore**.
+
+When an admin chooses **Block**, the IP address is blocked in the firewall, and the user is disabled in Azure Active Directory. When an admin chooses **Ignore**, the alert is closed in Azure Sentinel, and the incident is closed in the IT ticketing system.
+
+The workbook continues to run after it receives a response from the admins.
+
+Workbooks can be run manually or automatically when a rule triggers an alert.
