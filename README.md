@@ -219,6 +219,8 @@
   - [What's Conditional Access?](#whats-conditional-access)
   - [When can I use Conditional Access?](#when-can-i-use-conditional-access)
   - [Where is Conditional Access available?](#where-is-conditional-access-available)
+  - [Control access to cloud resources by using Azure role-based access control](#control-access-to-cloud-resources-by-using-azure-role-based-access-control)
+  - [How is role-based access control applied to resources?](#how-is-role-based-access-control-applied-to-resources)
   
 
 # Part 1: Describe core Azure concepts
@@ -1823,3 +1825,32 @@ Conditional Access comes with a What If tool, which helps you plan and troublesh
 
 ## Where is Conditional Access available?
 To use Conditional Access, you need an Azure AD Premium P1 or P2 license. If you have a Microsoft 365 Business Premium license, you also have access to Conditional Access features.
+
+---
+
+## Control access to cloud resources by using Azure role-based access control
+
+Instead of defining the detailed access requirements for each individual, and then updating access requirements when new resources are created, Azure enables you to control access through Azure role-based access control (Azure RBAC).
+
+Azure provides built-in roles that describe common access rules for cloud resources. You can also define your own roles. Each role has an associated set of access permissions that relate to that role. When you assign individuals or groups to one or more roles, they receive all of the associated access permissions.
+
+## How is role-based access control applied to resources?
+
+Role-based access control is applied to a scope, which is a resource or set of resources that this access applies to.
+
+Here's a diagram that shows the relationship between roles and scopes.
+
+Scopes include:
+
+- A management group (a collection of multiple subscriptions).
+- A single subscription.
+- A resource group.
+- A single resource.
+
+Observers, Users managing resources, Admins, and Automated processes illustrate the kinds of users or accounts that would typically be assigned each of the various roles.
+
+When you grant access at a parent scope, those permissions are inherited by all child scopes. For example:
+
+- When you assign the Owner role to a user at the management group scope, that user can manage everything in all subscriptions within the management group.
+- When you assign the Reader role to a group at the subscription scope, the members of that group can view every resource group and resource within the subscription.
+- When you assign the Contributor role to an application at the resource group scope, the application can manage resources of all types within that resource group, but not other resource groups within the subscription.
