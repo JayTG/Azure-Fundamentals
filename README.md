@@ -221,6 +221,11 @@
   - [Where is Conditional Access available?](#where-is-conditional-access-available)
   - [Control access to cloud resources by using Azure role-based access control](#control-access-to-cloud-resources-by-using-azure-role-based-access-control)
   - [How is role-based access control applied to resources?](#how-is-role-based-access-control-applied-to-resources)
+  - [When should I use Azure RBAC?](#when-should-i-use-azure-rbac)
+  - [How is Azure RBAC enforced?](#how-is-azure-rbac-enforced)
+  - [Who does Azure RBAC apply to?](#who-does-azure-rbac-apply-to)
+  - [Prevent accidental changes by using resource locks](#prevent-accidental-changes-by-using-resource-locks)
+  - [How do I manage resource locks?](#how-do-i-manage-resource-locks)
   
 
 # Part 1: Describe core Azure concepts
@@ -1856,3 +1861,39 @@ When you grant access at a parent scope, those permissions are inherited by all 
 - When you assign the Owner role to a user at the management group scope, that user can manage everything in all subscriptions within the management group.
 - When you assign the Reader role to a group at the subscription scope, the members of that group can view every resource group and resource within the subscription.
 - When you assign the Contributor role to an application at the resource group scope, the application can manage resources of all types within that resource group, but not other resource groups within the subscription.
+
+## When should I use Azure RBAC?
+Use Azure RBAC when you need to:
+
+- Allow one user to manage VMs in a subscription and another user to manage virtual networks.
+- Allow a database administrator group to manage SQL databases in a subscription.
+- Allow a user to manage all resources in a resource group, such as virtual machines, websites, and subnets.
+- Allow an application to access all resources in a resource group.
+
+These are just a few examples. You'll find the complete list of built-in roles at the end of this module.
+
+## How is Azure RBAC enforced?
+You typically access Resource Manager from the Azure portal, Azure Cloud Shell, Azure PowerShell, and the Azure CLI. Azure RBAC doesn't enforce access permissions at the application or data level.
+
+## Who does Azure RBAC apply to?
+You can apply Azure RBAC to an individual person or to a group. You can also apply Azure RBAC to other special identity types, such as service principals and managed identities. These identity types are used by applications and services to automate access to Azure resources.
+
+Tailwind Traders has the following teams with an interest in some part of their overall IT environment:
+
+- IT Administrators This team has ultimate ownership of technology assets, both on-premises and in the cloud. The team requires full control of all resources.
+- Backup and Disaster Recovery This team is responsible for managing the health of regular backups and invoking any data or system recoveries.
+- Cost and Billing People in this team track and report on technology-related spend. They also manage the organization's internal budgets.
+- Security Operations This team monitors and responds to any technology-related security incidents. The team requires ongoing access to log files and security alerts.
+
+## Prevent accidental changes by using resource locks
+
+A resource lock prevents resources from being accidentally deleted or changed.
+
+Even with Azure role-based access control (Azure RBAC) policies in place, there's still a risk that people with the right level of access could delete critical cloud resources. Think of a resource lock as a warning system that reminds you that a resource should not be deleted or changed.
+
+## How do I manage resource locks?
+You can manage resource locks from the Azure portal, PowerShell, the Azure CLI, or from an Azure Resource Manager template.
+
+To view, add, or delete locks in the Azure portal, go to the Settings section of any resource's Settings pane in the Azure portal.
+
+Here's an example that shows how to add a resource lock from the Azure portal. You'll apply a similar resource lock in the next part.
