@@ -1531,6 +1531,8 @@ Azure Firewall is a managed, cloud-based network security service that helps pro
 
 Here's a diagram that shows a basic Azure Firewall implementation:
 
+![3-firewall-overview](https://user-images.githubusercontent.com/87706066/163188669-349241ea-ef9c-4e5b-bbc2-e759bf341cab.png)
+
 Azure Firewall is a stateful firewall. A stateful firewall analyzes the complete context of a network connection, not just an individual packet of network traffic. Azure Firewall features high availability and unrestricted cloud scalability.
 
 Azure Firewall provides a central location to create, enforce, and log application and network connectivity policies across subscriptions and virtual networks. Azure Firewall uses a static (unchanging) public IP address for your virtual network resources, which enables outside firewalls to identify traffic coming from your virtual network. The service is integrated with Azure Monitor to enable logging and analytics.
@@ -1556,3 +1558,5 @@ Azure Application Gateway also provides a firewall that's called the web applica
 
 ## What are DDoS attacks?
 A distributed denial of service attack attempts to overwhelm and exhaust an application's resources, making the application slow or unresponsive to legitimate users. DDoS attacks can target any resource that's publicly reachable through the internet, including websites.
+
+
