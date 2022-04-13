@@ -1897,3 +1897,6 @@ You can manage resource locks from the Azure portal, PowerShell, the Azure CLI, 
 To view, add, or delete locks in the Azure portal, go to the Settings section of any resource's Settings pane in the Azure portal.
 
 Here's an example that shows how to add a resource lock from the Azure portal. You'll apply a similar resource lock in the next part.
+
+![7-portal-add-lock-ebc3d24c](https://user-images.githubusercontent.com/87706066/163205016-159cf200-84ec-4cba-91ec-b30035bf1e9e.png)
+
