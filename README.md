@@ -1794,7 +1794,7 @@ During sign-in, Conditional Access collects signals from the user, makes decisio
 
 Here's a diagram that illustrates this flow:
 
-
+![4-conditional-access-signal-decision-enforcement](https://user-images.githubusercontent.com/87706066/163203401-a9da4e97-aef2-4dec-a32c-25613096ed29.png)
 
 Here, the signal might be the user's location, the user's device, or the application that the user is trying to access.
 
