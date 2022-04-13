@@ -251,6 +251,7 @@
   - [Billing](#billing)
   - [Access control](#access-control)
   - [Subscription limits](#subscription-limits)
+  - [Which compliance categories are available on Azure?](#which-compliance-categories-are-available-on-azure)
   
 
 # Part 1: Describe core Azure concepts
@@ -2161,3 +2162,12 @@ Management groups are also available to assist with managing subscriptions. A ma
 
 --- 
 
+## Which compliance categories are available on Azure?
+
+Although there are many more, the following image shows some of the more popular compliance offerings that are available on Azure. These offerings are grouped under four categories: Global, US Government, Industry, and Regional.
+
+
+
+o get a sense of the variety of the compliance offerings available on Azure, let's take a closer look at a few of them.
+
+While not all of these compliance offerings will be relevant to you or your team, they show that Microsoft's commitment to compliance is comprehensive, ongoing, and independently tested and verified.
