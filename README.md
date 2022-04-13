@@ -178,6 +178,10 @@
   - [Investigate and respond](#investigate-and-respond)
   - [What can Azure Key Vault do?](#what-can-azure-key-vault-do)
   - [What are the benefits of Azure Key Vault?](#what-are-the-benefits-of-azure-key-vault)
+  - [Host your Azure virtual machines on dedicated physical servers by using Azure Dedicated Host](#host-your-azure-virtual-machines-on-dedicated-physical-servers-by-using-azure-dedicated-host)
+  - [What are the benefits of Azure Dedicated Host?](#what-are-the-benefits-of-azure-dedicated-host)
+  - [Availability considerations for Dedicated Host](#availability-considerations-for-dedicated-host)
+  - [Pricing considerations](#pricing-considerations)
   
 
 # Part 1: Describe core Azure concepts
@@ -1384,3 +1388,28 @@ The benefits of using Key Vault include:
 - **Access monitoring and access control** By using Key Vault, you can monitor and control access to your application secrets.
 - **Simplified administration of application secrets** Key Vault makes it easier to enroll and renew certificates from public certificate authorities (CAs). You can also scale up and replicate content within regions and use standard certificate management tools.
 - **Integration with other Azure services** You can integrate Key Vault with storage accounts, container registries, event hubs, and many more Azure services. These services can then securely reference the secrets stored in Key Vault.
+
+## Host your Azure virtual machines on dedicated physical servers by using Azure Dedicated Host
+
+On Azure, virtual machines (VMs) run on shared hardware that Microsoft manages. Although the underlying hardware is shared, your VM workloads are isolated from workloads that other Azure customers run.
+
+Some organizations must follow regulatory compliance that requires them to be the only customer using the physical machine that hosts their virtual machines. Azure Dedicated Host provides dedicated physical servers to host your Azure VMs for Windows and Linux.
+
+Here's a diagram that shows how VMs relate to dedicated hosts and host groups. A dedicated host is mapped to a physical server in an Azure datacenter. A host group is a collection of dedicated hosts.
+
+## What are the benefits of Azure Dedicated Host?
+Azure Dedicated Host:
+
+- Gives you visibility into, and control over, the server infrastructure that's running your Azure VMs.
+- Helps address compliance requirements by deploying your workloads on an isolated server.
+- Lets you choose the number of processors, server capabilities, VM series, and VM sizes within the same host.
+
+## Availability considerations for Dedicated Host
+After a dedicated host is provisioned, Azure assigns it to the physical server in Microsoft's cloud datacenter.
+
+For high availability, you can provision multiple hosts in a host group, and deploy your VMs across this group. VMs on dedicated hosts can also take advantage of maintenance control. This feature enables you to control when regular maintenance updates occur, within a 35-day rolling window.
+
+## Pricing considerations
+You're charged per dedicated host, independent of how many VMs you deploy to it. The host price is based on the VM family, type (hardware size), and region.
+
+Software licensing, storage, and network usage are billed separately from the host and VMs. For more information. see Azure Dedicated Host pricing.
