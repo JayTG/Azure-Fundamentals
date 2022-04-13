@@ -167,6 +167,9 @@
     - [Do you want to monitor Azure services or your usage of Azure?](#do-you-want-to-monitor-azure-services-or-your-usage-of-azure)
     - [Do you want to measure custom events alongside other usage metrics?](#do-you-want-to-measure-custom-events-alongside-other-usage-metrics)
     - [Do you need to set up alerts for outages or when autoscaling is about to deploy new instances?](#do-you-need-to-set-up-alerts-for-outages-or-when-autoscaling-is-about-to-deploy-new-instances)
+- [Part 4: Describe general security and network security features](#part-4-describe-general-security-and-network-security-features)
+  - [What is Azure Security Center?](#what-is-azure-security-center)
+  - [What is secure score?](#what-is-secure-score)
 
 # Part 1: Describe core Azure concepts
   
@@ -1264,7 +1267,35 @@ Here again, you would use Azure Monitor to set up alerts for key events that are
 
 --- 
 
+# Part 4: Describe general security and network security features
 
+## What is Azure Security Center?
 
+Azure Security Center is a monitoring service that provides visibility of your security posture across all of your services, both on Azure and on-premises. The term security posture refers to cybersecurity policies and controls, as well as how well you can predict, prevent, and respond to security threats.
 
+Security Center can:
 
+- Monitor security settings across on-premises and cloud workloads.
+- Automatically apply required security settings to new resources as they come online.
+- Provide security recommendations that are based on your current configurations, resources, and networks.
+- Continuously monitor your resources and perform automatic security assessments to identify potential vulnerabilities before those vulnerabilities can be exploited.
+- Use machine learning to detect and block malware from being installed on your virtual machines (VMs) and other resources. You can also use adaptive application controls to define rules that list allowed applications to ensure that only applications you allow can run.
+- Detect and analyze potential inbound attacks and investigate threats and any post-breach activity that might have occurred.
+- Provide just-in-time access control for network ports. Doing so reduces your attack surface by ensuring that the network only allows traffic that you require at the time that you need it to.
+
+## What is secure score?
+Secure score is a measurement of an organization's security posture.
+
+Secure score is based on security controls, or groups of related security recommendations. Your score is based on the percentage of security controls that you satisfy. The more security controls you satisfy, the higher the score you receive. Your score improves when you remediate all of the recommendations for a single resource within a control.
+
+Here's an example from the Azure portal showing a score of 57 percent, or 34 out of 60 points
+
+![2-single-secure-score-via-ui-602159ab](https://user-images.githubusercontent.com/87706066/163159251-2128d617-83a2-4b5e-9367-3db7f8c3551d.png)
+
+Following the secure score recommendations can help protect your organization from threats. From a centralized dashboard in Azure Security Center, organizations can monitor and work on the security of their Azure resources like identities, data, apps, devices, and infrastructure.
+
+Secure score helps you:
+
+Report on the current state of your organization's security posture.
+Improve your security posture by providing discoverability, visibility, guidance, and control.
+Compare with benchmarks and establish key performance indicators (KPIs).
