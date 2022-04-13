@@ -1840,6 +1840,8 @@ Role-based access control is applied to a scope, which is a resource or set of r
 
 Here's a diagram that shows the relationship between roles and scopes.
 
+![4-role-scope-0223bfae](https://user-images.githubusercontent.com/87706066/163204193-fb69e629-4ff9-4696-abb5-84fa4565cf86.png)
+
 Scopes include:
 
 - A management group (a collection of multiple subscriptions).
