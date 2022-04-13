@@ -193,6 +193,8 @@
     - [Data](#data)
   - [Security posture](#security-posture)
   - [What's Azure Firewall?](#whats-azure-firewall)
+  - [What can I configure with Azure Firewall?](#what-can-i-configure-with-azure-firewall)
+  - [What are DDoS attacks?](#what-are-ddos-attacks)
   
 
 # Part 1: Describe core Azure concepts
@@ -1543,4 +1545,14 @@ Azure Firewall provides many features, including:
 
 You typically deploy Azure Firewall on a central virtual network to control general network access.
 
+## What can I configure with Azure Firewall?
+With Azure Firewall, you can configure:
 
+- Application rules that define fully qualified domain names (FQDNs) that can be accessed from a subnet.
+- Network rules that define source address, protocol, destination port, and destination address.
+- Network Address Translation (NAT) rules that define destination IP addresses and ports to translate inbound requests.
+  
+Azure Application Gateway also provides a firewall that's called the web application firewall (WAF). WAF provides centralized, inbound protection for your web applications against common exploits and vulnerabilities. Azure Front Door and Azure Content Delivery Network also provide WAF services.
+
+## What are DDoS attacks?
+A distributed denial of service attack attempts to overwhelm and exhaust an application's resources, making the application slow or unresponsive to legitimate users. DDoS attacks can target any resource that's publicly reachable through the internet, including websites.
