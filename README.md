@@ -1614,4 +1614,6 @@ A network security group enables you to filter network traffic to and from Azure
 ## How do I specify NSG rules?
 A network security group can contain as many rules as you need, within Azure subscription limits. Each rule specifies these properties:
 
+![4-distributed-denial-service](https://user-images.githubusercontent.com/87706066/163194843-e46ea24b-962a-456d-b4ac-82ec4fec147e.png)
+
 When you create a network security group, Azure creates a series of default rules to provide a baseline level of security. You can't remove the default rules, but you can override them by creating new rules with higher priorities.
