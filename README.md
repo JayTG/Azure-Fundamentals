@@ -238,6 +238,10 @@
   - [Task 2. Assign the definition to resources](#task-2-assign-the-definition-to-resources)
   - [Task 3. Review the evaluation results](#task-3-review-the-evaluation-results)
   - [What are Azure Policy initiatives?](#what-are-azure-policy-initiatives)
+  - [Govern multiple subscriptions by using Azure Blueprints](#govern-multiple-subscriptions-by-using-azure-blueprints)
+  - [Azure Blueprints in action](#azure-blueprints-in-action)
+  - [What are blueprint artifacts?](#what-are-blueprint-artifacts)
+  - [Accelerate your cloud adoption journey by using the Cloud Adoption Framework for Azure](#accelerate-your-cloud-adoption-journey-by-using-the-cloud-adoption-framework-for-azure)
   
 
 # Part 1: Describe core Azure concepts
@@ -2007,3 +2011,52 @@ How do I assign an initiative?
 Like a policy assignment, an initiative assignment is an initiative definition that's assigned to a specific scope of a management group, a subscription, or a resource group.
 
 Even if you have only a single policy, an initiative enables you to increase the number of policies over time. Because the associated initiative remains assigned, it's easier to add and remove policies without the need to change the policy assignment for your resources.
+
+## Govern multiple subscriptions by using Azure Blueprints
+
+Instead of having to configure features like Azure Policy for each new subscription, with Azure Blueprints you can define a repeatable set of governance tools and standard Azure resources that your organization requires. In this way, development teams can rapidly build and deploy new environments with the knowledge that they're building within organizational compliance with a set of built-in components that speed the development and deployment phases.
+
+Azure Blueprints orchestrates the deployment of various resource templates and other artifacts, such as:
+
+- Role assignments
+- Policy assignments
+- Azure Resource Manager templates
+- Resource groups
+
+## Azure Blueprints in action
+When you form a cloud center of excellence team or a cloud custodian team, that team can use Azure Blueprints to scale their governance practices throughout the organization.
+
+Implementing a blueprint in Azure Blueprints involves these three steps:
+
+1. Create an Azure blueprint.
+2. Assign the blueprint.
+3. Track the blueprint assignments.
+   
+With Azure Blueprints, the relationship between the blueprint definition (what should be deployed) and the blueprint assignment (what was deployed) is preserved. In other words, Azure creates a record that associates a resource with the blueprint that defines it. This connection helps you track and audit your deployments.
+
+Blueprints are also versioned. Versioning enables you to track and comment on changes to your blueprint.
+
+## What are blueprint artifacts?
+Each component in the blueprint definition is known as an artifact.
+
+It is possible for artifacts to have no additional parameters (configurations). An example is the Deploy threat detection on SQL servers policy, which requires no additional configuration.
+
+Artifacts can also contain one or more parameters that you can configure. The following screenshot shows the Allowed locations policy. This policy includes a parameter that specifies the allowed locations.
+
+You can specify a parameter's value when you create the blueprint definition or when you assign the blueprint definition to a scope. In this way, you can maintain one standard blueprint but have the flexibility to specify the relevant configuration parameters at each scope where the definition is assigned.
+
+## Accelerate your cloud adoption journey by using the Cloud Adoption Framework for Azure
+
+The Cloud Adoption Framework for Azure provides you with proven guidance to help with your cloud adoption journey. The Cloud Adoption Framework helps you create and implement the business and technology strategies needed to succeed in the cloud.
+
+Cloud Adoption Framework consists of tools, documentation, and proven practices. The Cloud Adoption Framework includes these stages:
+
+1. Define your strategy.
+2. Make a plan.
+3. Ready your organization.
+4. Adopt the cloud.
+5. Govern and manage your cloud environments.
+
+The govern stage focuses on cloud governance. You can refer back to the Cloud Adoption Framework for recommended guidance as you build your cloud governance strategy.
+
+To help build your adoption strategy, the Cloud Adoption Framework breaks out each stage into further exercises and steps. Let's take a brief look at each stage.
