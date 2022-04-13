@@ -1373,6 +1373,8 @@ Azure Key Vault can help you:
   
 Here's an example that shows a certificate used for testing in Key Vault
 
+![4-key-vault-certificates-b32bfbfe](https://user-images.githubusercontent.com/87706066/163179901-016938ac-abda-46de-9dd0-3787dfd542bf.png)
+
 ## What are the benefits of Azure Key Vault?
 
 The benefits of using Key Vault include:
