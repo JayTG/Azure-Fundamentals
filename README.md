@@ -1673,6 +1673,8 @@ Authentication establishes the user's identity, but authorization is the process
 
 Here's a diagram that shows the relationship between authentication and authorization:
 
-
+![2-id-card-access](https://user-images.githubusercontent.com/87706066/163198672-d769f358-09db-427a-b95f-caa3152f6684.png)
 
 The identification card represents credentials that the user has to prove their identity (you'll learn more about the types of credentials later in this module.) Once authenticated, authorization defines what kinds of applications, resources, and data that user can access.
+
+## 
