@@ -2001,6 +2001,7 @@ You define initiatives by using the Azure portal or command-line tools. From the
 
 The following image shows a few example Azure Policy initiatives in the Azure portal.
 
+![3-define-initiatives-a834dde7](https://user-images.githubusercontent.com/87706066/163208464-19ced9e0-4ea4-46bd-a594-828a87a18e28.png)
 
 How do I assign an initiative?
 Like a policy assignment, an initiative assignment is an initiative definition that's assigned to a specific scope of a management group, a subscription, or a resource group.
