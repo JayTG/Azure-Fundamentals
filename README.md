@@ -2166,8 +2166,8 @@ Management groups are also available to assist with managing subscriptions. A ma
 
 Although there are many more, the following image shows some of the more popular compliance offerings that are available on Azure. These offerings are grouped under four categories: Global, US Government, Industry, and Regional.
 
+![2-compliance-matrix-383090ad](https://user-images.githubusercontent.com/87706066/163215089-09845833-0e94-4c9c-953c-118d74a655ec.png)
 
-
-o get a sense of the variety of the compliance offerings available on Azure, let's take a closer look at a few of them.
+To get a sense of the variety of the compliance offerings available on Azure, let's take a closer look at a few of them.
 
 While not all of these compliance offerings will be relevant to you or your team, they show that Microsoft's commitment to compliance is comprehensive, ongoing, and independently tested and verified.
