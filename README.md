@@ -226,6 +226,18 @@
   - [Who does Azure RBAC apply to?](#who-does-azure-rbac-apply-to)
   - [Prevent accidental changes by using resource locks](#prevent-accidental-changes-by-using-resource-locks)
   - [How do I manage resource locks?](#how-do-i-manage-resource-locks)
+  - [What levels of locking are available?](#what-levels-of-locking-are-available)
+  - [How do I delete or change a locked resource?](#how-do-i-delete-or-change-a-locked-resource)
+  - [Combine resource locks with Azure Blueprints](#combine-resource-locks-with-azure-blueprints)
+  - [Organize your Azure resources by using tags](#organize-your-azure-resources-by-using-tags)
+  - [How do I manage resource tags?](#how-do-i-manage-resource-tags)
+  - [Control and audit your resources by using Azure Policy](#control-and-audit-your-resources-by-using-azure-policy)
+  - [How does Azure Policy define policies?](#how-does-azure-policy-define-policies)
+  - [Azure Policy in action](#azure-policy-in-action)
+    - [Task 1. Create a policy definition](#task-1-create-a-policy-definition)
+  - [Task 2. Assign the definition to resources](#task-2-assign-the-definition-to-resources)
+  - [Task 3. Review the evaluation results](#task-3-review-the-evaluation-results)
+  - [What are Azure Policy initiatives?](#what-are-azure-policy-initiatives)
   
 
 # Part 1: Describe core Azure concepts
@@ -1900,3 +1912,97 @@ Here's an example that shows how to add a resource lock from the Azure portal. Y
 
 ![7-portal-add-lock-ebc3d24c](https://user-images.githubusercontent.com/87706066/163205016-159cf200-84ec-4cba-91ec-b30035bf1e9e.png)
 
+## What levels of locking are available?
+You can apply locks to a subscription, a resource group, or an individual resource. You can set the lock level to **CanNotDelete** or **ReadOnly**.
+
+- **CanNotDelete** means authorized people can still read and modify a resource, but they can't delete the resource without first removing the lock.
+- **ReadOnly** means authorized people can read a resource, but they can't delete or change the resource. Applying this lock is like restricting all authorized users to the permissions granted by the Reader role in Azure RBAC.
+
+## How do I delete or change a locked resource?
+To modify a locked resource, you must first remove the lock. Even if you're an owner of the resource, you must still remove the lock before you can perform the blocked activity.
+
+## Combine resource locks with Azure Blueprints
+What if a cloud administrator accidentally deletes a resource lock? If the resource lock is removed, its associated resources can be changed or deleted.
+
+To make the protection process more robust, you can combine resource locks with Azure Blueprints. Azure Blueprints enables you to define the set of standard Azure resources that your organization requires. For example, you can define a blueprint that specifies that a certain resource lock must exist. Azure Blueprints can automatically replace the resource lock if that lock is removed.
+
+## Organize your Azure resources by using tags
+One way to organize related resources is to place them in their own subscriptions. You can also use resource groups to manage related resources. Resource tags are another way to organize resources. Tags provide extra information, or metadata, about your resources. This metadata is useful for:
+
+- **Resource management** Tags enable you to locate and act on resources that are associated with specific workloads, environments, business units, and owners.
+- **Cost management and optimization** Tags enable you to group resources so that you can report on costs, allocate internal cost centers, track budgets, and forecast estimated cost.
+- **Operations management** Tags enable you to group resources according to how critical their availability is to your business. This grouping helps you formulate service-level agreements (SLAs). An SLA is an uptime or performance guarantee between you and your users.
+- **Security** Tags enable you to classify data by its security level, such as public or confidential.
+- **Governance and regulatory compliance** Tags enable you to identify resources that align with governance or regulatory compliance requirements, such as ISO 27001. Tags can also be part of your standards enforcement efforts. For example, you might require that all resources be tagged with an owner or department name.
+- **Workload optimization and automation** Tags can help you visualize all of the resources that participate in complex deployments. For example, you might tag a resource with its associated workload or application name and use software such as Azure DevOps to perform automated tasks on those resources.
+
+## How do I manage resource tags?
+You can add, modify, or delete resource tags through PowerShell, the Azure CLI, Azure Resource Manager templates, the REST API, or the Azure portal.
+
+You can also manage tags by using Azure Policy. For example, you can apply tags to a resource group, but those tags aren't automatically applied to the resources within that resource group. You can use Azure Policy to ensure that a resource inherits the same tags as its parent resource group. You'll learn more about Azure Policy later in this module.
+
+You can also use Azure Policy to enforce tagging rules and conventions. For example, you can require that certain tags be added to new resources as they're provisioned. You can also define rules that reapply tags that have been removed.
+
+## Control and audit your resources by using Azure Policy
+
+Azure Policy is a service in Azure that enables you to create, assign, and manage policies that control or audit your resources. These policies enforce different rules across all of your resource configurations so that those configurations stay compliant with corporate standards.
+
+## How does Azure Policy define policies?
+Azure Policy enables you to define both individual policies and groups of related policies, known as initiatives. Azure Policy comes with built-in policy and initiative definitions for Storage, Networking, Compute, Security Center, and Monitoring. In some cases, Azure Policy can automatically remediate noncompliant resources and configurations to ensure the integrity of the state of the resources. For example, if all resources in a certain resource group should be tagged with AppName tag and a value of «SpecialOrders,» Azure Policy will automatically reapply that tag if it was missing.
+
+## Azure Policy in action
+Implementing a policy in Azure Policy involves three tasks:
+
+1. Create a policy definition.
+2. Assign the definition to resources.
+3. Review the evaluation results.
+   
+Let's examine each step in more detail.
+
+### Task 1. Create a policy definition
+A policy definition expresses what to evaluate and what action to take. For example, you could prevent VMs from being deployed in certain Azure regions. You also could audit your storage accounts to verify that they only accept connections from allowed networks.
+
+Every policy definition has conditions under which it's enforced. A policy definition also has an accompanying effect that takes place when the conditions are met. Here are some example policy definitions:
+
+- **Allowed virtual machine SKUs** This policy enables you to specify a set of VM SKUs that your organization can deploy.
+- **Allowed locations** This policy enables you to restrict the locations that your organization can specify when it deploys resources. Its effect is used to enforce your geographic compliance requirements.
+- **MFA should be enabled on accounts with write permissions on your subscription** This policy requires that multifactor authentication (MFA) be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources.
+- **CORS should not allow every resource to access your web applications** Cross-origin resource sharing (CORS) is an HTTP feature that enables a web application running under one domain to access resources in another domain. For security reasons, modern web browsers restrict cross-site scripting by default. This policy allows only required domains to interact with your web app.
+- **System updates should be installed on your machines** This policy enables Azure Security Center to recommend missing security system updates on your servers.
+
+## Task 2. Assign the definition to resources
+To implement your policy definitions, you assign definitions to resources. A policy assignment is a policy definition that takes place within a specific scope. This scope could be a management group (a collection of multiple subscriptions), a single subscription, or a resource group.
+
+Policy assignments are inherited by all child resources within that scope. If a policy is applied to a resource group, that policy is applied to all resources within that resource group. You can exclude a subscope from the policy assignment if there are specific child resources you need to be exempt from the policy assignment.
+
+## Task 3. Review the evaluation results
+When a condition is evaluated against your existing resources, each resource is marked as compliant or noncompliant. You can review the noncompliant policy results and take any action that's needed.
+
+Policy evaluation happens about once per hour. If you make changes to your policy definition and create a policy assignment, that policy is evaluated over your resources within the hour.
+
+## What are Azure Policy initiatives?
+An Azure Policy initiative is a way of grouping related policies together. The initiative definition contains all of the policy definitions to help track your compliance state for a larger goal.
+
+For example, Azure Policy includes an initiative named Enable Monitoring in Azure Security Center. Its goal is to monitor all of the available security recommendations for all Azure resource types in Azure Security Center.
+
+Under this initiative, the following policy definitions are included:
+
+- **Monitor unencrypted SQL Database in Security Center** This policy monitors for unencrypted SQL databases and servers.
+- **Monitor OS vulnerabilities in Security Center** This policy monitors servers that don't satisfy the configured OS vulnerability baseline.
+- **Monitor missing Endpoint Protection in Security Center** This policy monitors for servers that don't have an installed endpoint protection agent.
+  
+In fact, the Enable Monitoring in Azure Security Center initiative contains over 100 separate policy definitions.
+ 
+Azure Policy also includes initiatives that support regulatory compliance standards, such as HIPAA and ISO 27001.
+
+How do I define an initiative?
+
+You define initiatives by using the Azure portal or command-line tools. From the Azure portal, you can search the list of built-in initiatives that are built into Azure. You also can create your own custom policy definition.
+
+The following image shows a few example Azure Policy initiatives in the Azure portal.
+
+
+How do I assign an initiative?
+Like a policy assignment, an initiative assignment is an initiative definition that's assigned to a specific scope of a management group, a subscription, or a resource group.
+
+Even if you have only a single policy, an initiative enables you to increase the number of policies over time. Because the associated initiative remains assigned, it's easier to add and remove policies without the need to change the policy assignment for your resources.
