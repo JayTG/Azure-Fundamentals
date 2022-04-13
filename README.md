@@ -1570,7 +1570,7 @@ When you combine DDoS Protection with recommended application design practices, 
 
 This diagram shows network traffic flowing into Azure from both customers and an attacker:
 
-
+![4-distributed-denial-service](https://user-images.githubusercontent.com/87706066/163194144-81454a00-95c7-42c9-9335-4cd2dc87934d.png)
 
 DDoS Protection identifies the attacker's attempt to overwhelm the network and blocks further traffic from them, ensuring that traffic never reaches Azure resources. Legitimate traffic from customers still flows into Azure without any interruption of service.
 
