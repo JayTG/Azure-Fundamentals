@@ -203,6 +203,10 @@
   - [Secure the perimeter layer](#secure-the-perimeter-layer)
   - [Secure the network layer](#secure-the-network-layer)
   - [Combine services](#combine-services)
+- [Part 5: Describe identity, governance, privacy, and compliance features](#part-5-describe-identity-governance-privacy-and-compliance-features)
+  - [What is authentication?](#what-is-authentication)
+  - [What is authorization?](#what-is-authorization)
+  - [How are authentication and authorization related?](#how-are-authentication-and-authorization-related)
   
 
 # Part 1: Describe core Azure concepts
@@ -1654,3 +1658,21 @@ You can combine Azure networking and security services to manage your network se
 > - Application-level protection for outbound HTTP/S.
 > 
 >Combining them provides more layers of protection.
+
+--- 
+# Part 5: Describe identity, governance, privacy, and compliance features
+
+## What is authentication?
+
+Authentication is the process of establishing the identity of a person or service that wants to access a resource. It involves the act of challenging a party for legitimate credentials and provides the basis for creating a security principal for identity and access control. It establishes whether the user is who they say they are.
+
+## What is authorization?
+Authentication establishes the user's identity, but authorization is the process of establishing what level of access an authenticated person or service has. It specifies what data they're allowed to access and what they can do with it.
+
+## How are authentication and authorization related?
+
+Here's a diagram that shows the relationship between authentication and authorization:
+
+
+
+The identification card represents credentials that the user has to prove their identity (you'll learn more about the types of credentials later in this module.) Once authenticated, authorization defines what kinds of applications, resources, and data that user can access.
