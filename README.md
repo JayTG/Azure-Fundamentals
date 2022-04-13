@@ -252,6 +252,14 @@
   - [Access control](#access-control)
   - [Subscription limits](#subscription-limits)
   - [Which compliance categories are available on Azure?](#which-compliance-categories-are-available-on-azure)
+  - [What's in the Microsoft Privacy Statement?](#whats-in-the-microsoft-privacy-statement)
+  - [What's in the Online Services Terms?](#whats-in-the-online-services-terms)
+  - [What is the Data Protection Addendum?](#what-is-the-data-protection-addendum)
+  - [Explore the Trust Center](#explore-the-trust-center)
+  - [What is the Azure compliance documentation?](#what-is-the-azure-compliance-documentation)
+  - [What is Azure Government?](#what-is-azure-government)
+  - [What is Azure China 21Vianet?](#what-is-azure-china-21vianet)
+  - [Azure products and services available in China](#azure-products-and-services-available-in-china)
   
 
 # Part 1: Describe core Azure concepts
@@ -2171,3 +2179,78 @@ Although there are many more, the following image shows some of the more popular
 To get a sense of the variety of the compliance offerings available on Azure, let's take a closer look at a few of them.
 
 While not all of these compliance offerings will be relevant to you or your team, they show that Microsoft's commitment to compliance is comprehensive, ongoing, and independently tested and verified.
+
+## What's in the Microsoft Privacy Statement?
+The Microsoft Privacy Statement explains what personal data Microsoft collects, how Microsoft uses it, and for what purposes.
+
+The privacy statement covers all of Microsoft's services, websites, apps, software, servers, and devices. This list ranges from enterprise and server products to devices that you use in your home to software that students use at school.
+
+Microsoft's privacy statement also provides information that's relevant to specific products such as Windows and Xbox.
+
+## What's in the Online Services Terms?
+The Online Services Terms (OST) is a legal agreement between Microsoft and the customer. The OST details the obligations by both parties with respect to the processing and security of customer data and personal data. The OST applies specifically to Microsoft's online services that you license through a subscription, including Azure, Dynamics 365, Office 365, and Bing Maps.
+
+## What is the Data Protection Addendum?
+The Data Protection Addendum (DPA) further defines the data processing and security terms for online services. These terms include:
+
+- Compliance with laws.
+- Disclosure of processed data.
+- Data Security, which includes security practices and policies, data encryption, data access, customer responsibilities, and compliance with auditing.
+- Data transfer, retention, and deletion.
+
+To access the DPA:
+1. Go to the [Licensing Terms and Documentation](https://www.microsoft.com/licensing/docs?redirected=true).
+2. In the search bar, enter **DPA**.
+3. From the search results, locate the link to the DPA in your preferred language. Alternatively, in the search bar that appears, enter your preferred language to filter the results. Here's an example that retrieves the English version of the DPA.
+
+## Explore the Trust Center
+The Trust Center showcases Microsoft's principles for maintaining data integrity in the cloud and how Microsoft implements and supports security, privacy, compliance, and transparency in all Microsoft cloud products and services. The Trust Center is an important part of the Microsoft Trusted Cloud Initiative and provides support and resources for the legal and compliance community.
+
+The Trust Center provides:
+
+- In-depth information about security, privacy, compliance offerings, policies, features, and practices across Microsoft cloud products.
+- Additional resources for each topic.
+- Links to the security, privacy, and compliance blogs and upcoming events.
+
+The Trust Center is a great resource for other people in your organization who might play a role in security, privacy, and compliance. These people include business managers, risk assessment and privacy officers, and legal compliance teams.
+
+## What is the Azure compliance documentation?
+
+The Azure compliance documentation provides you with detailed documentation about legal and regulatory standards and compliance on Azure.
+
+Here you find compliance offerings across these categories:
+
+- Global
+- US government
+- Financial services
+- Health
+- Media and manufacturing
+- Regional
+
+There are also additional compliance resources, such as audit reports, privacy information, compliance implementations and mappings, and white papers and analyst reports. Country and region privacy and compliance guidelines are also included. Some resources might require you to be signed in to your cloud service to access them.
+
+## What is Azure Government?
+
+Azure Government is a separate instance of the Microsoft Azure service. It addresses the security and compliance needs of US federal agencies, state and local governments, and their solution providers. Azure Government offers physical isolation from non-US government deployments and provides screened US personnel.
+
+Azure Government services handle data that is subject to certain government regulations and requirements:
+
+- Federal Risk and Authorization Management Program (FedRAMP)
+- National Institute of Standards and Technology (NIST) 800.171 Defense Industrial Base (DIB)
+- International Traffic in Arms Regulations (ITAR)
+- Internal Revenue Service (IRS) 1075
+- Department of Defense (DoD) L4
+- Criminal Justice Information Service (CJIS)
+
+To provide the highest level of security and compliance, Azure Government uses physically isolated datacenters and networks located only in the US. Azure Government customers, such as the US federal, state, and local government or their partners, are subject to validation of eligibility.
+
+Azure Government provides the broadest compliance and Level 5 DoD approval. Azure Government is available in eight geographies and offers the most compliance certifications of any cloud provider.
+
+## What is Azure China 21Vianet?
+Azure China 21Vianet is operated by 21Vianet. Azure China 21Vianet is independently operated and transacted by Shanghai Blue Cloud Technology Co. , a wholly owned subsidiary of Beijing 21Vianet Broadband Data Center Co. To comply with this regulation, the Azure service in China is operated by 21Vianet, based on the technologies licensed from Microsoft.
+
+As the first foreign public cloud service provider offered in China in compliance with government regulations, Azure China 21Vianet provides world-class security as discussed on the Trust Center, as required by Chinese regulations for all systems and applications built on its architecture.
+
+## Azure products and services available in China
+The Azure services are based on the same Azure, Office 365, and Power BI technologies that make up the Microsoft global cloud service, with comparable service levels. Azure includes the core components of IaaS, PaaS, and software as a service . Azure China 21Vianet supports most of the same services that global Azure has, such as geosynchronous data replication and autoscaling.
+
