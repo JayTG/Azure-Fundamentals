@@ -200,6 +200,9 @@
   - [What kinds of attacks can DDoS Protection help prevent?](#what-kinds-of-attacks-can-ddos-protection-help-prevent)
   - [What are network security groups?](#what-are-network-security-groups)
   - [How do I specify NSG rules?](#how-do-i-specify-nsg-rules)
+  - [Secure the perimeter layer](#secure-the-perimeter-layer)
+  - [Secure the network layer](#secure-the-network-layer)
+  - [Combine services](#combine-services)
   
 
 # Part 1: Describe core Azure concepts
@@ -1615,3 +1618,39 @@ A network security group enables you to filter network traffic to and from Azure
 A network security group can contain as many rules as you need, within Azure subscription limits. Each rule specifies these properties:
 
 When you create a network security group, Azure creates a series of default rules to provide a baseline level of security. You can't remove the default rules, but you can override them by creating new rules with higher priorities.
+
+## Secure the perimeter layer
+The perimeter layer is about protecting your organization's resources from network-based attacks. Identifying these attacks, alerting the appropriate security teams, and eliminating their impact are important to keeping your network secure. To do this:
+
+- Use Azure DDoS Protection to filter large-scale attacks before they can cause a denial of service for users.
+- Use perimeter firewalls with Azure Firewall to identify and alert on malicious attacks against your network.
+
+## Secure the network layer
+At this layer, the focus is on limiting network connectivity across all of your resources to allow only what's required. Segment your resources and use network-level controls to restrict communication to only what's needed.
+
+By restricting connectivity, you reduce the risk of lateral movement throughout your network from an attack. Use network security groups to create rules that define allowed inbound and outbound communication at this layer. Here are some recommended practices:
+
+- Limit communication between resources by segmenting your network and configuring access controls.
+- Deny by default.
+- Restrict inbound internet access and limit outbound where appropriate.
+- Implement secure connectivity to on-premises networks.
+
+## Combine services
+You can combine Azure networking and security services to manage your network security and provide increased layered protection. Here are two ways you can combine services:
+
+- **Network security groups and Azure Firewall**
+>Azure Firewall complements the functionality of network security groups. Together, they provide better defense-in-depth network security.
+>
+>Network security groups provide distributed network-layer traffic filtering to limit traffic to resources within virtual networks in each subscription.
+>
+>Azure Firewall is a fully stateful, centralized network firewall as a service. It provides network-level and application-level protection across different subscriptions and virtual networks.
+- **Azure Application Gateway web application firewall and Azure Firewall**
+>Web application firewall (WAF) is a feature of Azure Application Gateway that provides your web applications with centralized, inbound protection against common exploits and vulnerabilities.
+>
+>Azure Firewall provides:
+>
+> - Inbound protection for non-HTTP/S protocols (for example, RDP, SSH, and FTP).
+> - Outbound network-level protection for all ports and protocols.
+> - Application-level protection for outbound HTTP/S.
+> 
+>Combining them provides more layers of protection.
