@@ -198,6 +198,8 @@
   - [What is Azure DDoS Protection?](#what-is-azure-ddos-protection)
   - [What service tiers are available to DDoS Protection?](#what-service-tiers-are-available-to-ddos-protection)
   - [What kinds of attacks can DDoS Protection help prevent?](#what-kinds-of-attacks-can-ddos-protection-help-prevent)
+  - [What are network security groups?](#what-are-network-security-groups)
+  - [How do I specify NSG rules?](#how-do-i-specify-nsg-rules)
   
 
 # Part 1: Describe core Azure concepts
@@ -1604,3 +1606,12 @@ The Standard service tier can help prevent:
 > These attacks render a target inaccessible by exploiting a weakness in the layer 3 and layer 4 protocol stack.
 - **Resource-layer (application-layer) attacks (only with web application firewall)**
 > These attacks target web application packets to disrupt the transmission of data between hosts. You need a web application firewall (WAF) to protect against L7 attacks. DDoS Protection Standard protects the WAF from volumetric and protocol attacks.
+
+## What are network security groups?
+
+A network security group enables you to filter network traffic to and from Azure resources within an Azure virtual network. You can think of NSGs like an internal firewall. An NSG can contain multiple inbound and outbound security rules that enable you to filter traffic to and from resources by source and destination IP address, port, and protocol.
+
+## How do I specify NSG rules?
+A network security group can contain as many rules as you need, within Azure subscription limits. Each rule specifies these properties:
+
+When you create a network security group, Azure creates a series of default rules to provide a baseline level of security. You can't remove the default rules, but you can override them by creating new rules with higher priorities.
