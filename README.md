@@ -291,6 +291,13 @@
   - [Migrate from IaaS to PaaS services](#migrate-from-iaas-to-paas-services)
   - [Save on licensing costs](#save-on-licensing-costs)
   - [Choose cost-effective operating systems](#choose-cost-effective-operating-systems)
+  - [What are service-level agreements (SLAs)?](#what-are-service-level-agreements-slas)
+  - [Why are SLAs important?](#why-are-slas-important)
+  - [What's in a typical SLA?](#whats-in-a-typical-sla)
+  - [What are service credits?](#what-are-service-credits)
+  - [What's the SLA for free services?](#whats-the-sla-for-free-services)
+  - [How do I know when there's an outage?](#how-do-i-know-when-theres-an-outage)
+  - [How can I request a service credit from Microsoft?](#how-can-i-request-a-service-credit-from-microsoft)
   
 
 # Part 1: Describe core Azure concepts
@@ -2559,3 +2566,59 @@ Licensing is another area that can dramatically impact your cloud spending. Let'
 
 ## Choose cost-effective operating systems
 Many Azure services provide a choice of running on Windows or Linux. In some cases, the cost depends on which you choose. When you have a choice, and your application doesn't depend on the underlying operating system, it's useful to compare pricing to see whether you can save money.
+
+--- 
+## What are service-level agreements (SLAs)?
+A service-level agreement (SLA) is a formal agreement between a service company and the customer. For Azure, this agreement defines the performance standards that Microsoft commits to for you, the customer.
+
+## Why are SLAs important?
+Understanding the SLA for each Azure service you use helps you understand what guarantees you can expect.
+
+When you build applications on Azure, the availability of the services that you use affect your application's performance. Understanding the SLAs involved can help you establish the SLA you set with your customers.
+
+Later in this module, you'll learn about some strategies you can use when an Azure SLA doesn't meet your needs.
+
+## What's in a typical SLA?
+A typical SLA breaks down into these sections:
+
+- Introduction
+
+>This section explains what to expect in the SLA, including its scope and how subscription renewals can affect the terms.
+
+- General terms
+
+>This section contains terms that are used throughout the SLA so that both parties (you and Microsoft) have a consistent vocabulary. For example, this section might define what's meant by downtime, incidents, and error codes.
+>
+>This section also defines the general terms of the agreement, including how to submit a claim, receive credit for any performance or availability issues, and limitations of the agreement.
+
+- SLA details
+
+>This section defines the specific guarantees for the service. Performance commitments are commonly measured as a percentage. That percentage typically ranges from 99.9 percent ("three nines") to 99.99 percent ("four nines").
+>
+>The primary performance commitment typically focuses on uptime, or the percentage of time that a product or service is successfully operational. Some SLAs focus on other factors as well, including latency, or how fast the service must respond to a request.
+>
+>This section also defines any additional terms that are specific to this service.,
+
+## What are service credits?
+A service credit is the percentage of the fees you paid that are credited back to you according to the claim approval process.
+
+An SLA describes how Microsoft responds when an Azure service fails to perform to its specification. For example, you might receive a discount on your Azure bill as compensation when a service fails to perform according to its SLA.
+
+Credits typically increase as uptime decreases. Here's how credits are applied for Azure Database for MySQL according to uptime:
+
+## What's the SLA for free services?
+Free products typically don't have an SLA.
+
+For example, many Azure services provide a free or shared tier that provides more limited functionality. Services like Azure Advisor are always free. The SLA for Azure Advisor states that because it's free, it doesn't have a financially backed SLA.
+
+## How do I know when there's an outage?
+Azure status provides a global view of the health of Azure services and regions. If you suspect there's an outage, this is often a good place to start your investigation.
+
+Azure status provides an RSS feed of changes to the health of Azure services that you can subscribe to. You can connect this feed to communication software such as Microsoft Teams or Slack.
+
+From the Azure status page, you can also access Azure Service Health. This provides a personalized view of the health of the Azure services and regions that you're using, directly from the Azure portal.
+
+## How can I request a service credit from Microsoft?
+Typically, you need to file a claim with Microsoft to receive a service credit. If you purchase Azure services from a Cloud Solution Provider (CSP) partner, your CSP typically manages the claims process.
+
+Each SLA specifies the timeline by which you must submit your claim and when Microsoft processes your claim. For many services, you must submit your claim by the end of the calendar month following the month in which the incident occurred.
