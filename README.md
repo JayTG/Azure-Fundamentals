@@ -120,9 +120,9 @@
   - [Azure Data Lake Analytics](#azure-data-lake-analytics)
 - [Part 3: Describe core solutions and management tools on Azure](#part-3-describe-core-solutions-and-management-tools-on-azure)
   - [Identify the product options](#identify-the-product-options)
-  - [Azure IoT Hub](#azure-iot-hub)
-  - [Azure IoT Central](#azure-iot-central)
-  - [Azure Sphere](#azure-sphere)
+    - [Azure IoT Hub](#azure-iot-hub)
+    - [Azure IoT Central](#azure-iot-central)
+    - [Azure Sphere](#azure-sphere)
   - [Analyze the decision criteria](#analyze-the-decision-criteria)
     - [Is it critical to ensure that the device is not compromised?](#is-it-critical-to-ensure-that-the-device-is-not-compromised)
     - [Do I need a dashboard for reporting and management?](#do-i-need-a-dashboard-for-reporting-and-management)
@@ -132,8 +132,8 @@
     - [Why not use Azure Sphere?](#why-not-use-azure-sphere)
   - [Azure product options](#azure-product-options)
     - [Azure Machine Learning](#azure-machine-learning)
-  - [Azure Cognitive Services](#azure-cognitive-services)
-  - [Azure Bot Service](#azure-bot-service)
+    - [Azure Cognitive Services](#azure-cognitive-services)
+    - [Azure Bot Service](#azure-bot-service)
   - [Are you building a virtual agent that interfaces with humans via natural language?](#are-you-building-a-virtual-agent-that-interfaces-with-humans-via-natural-language)
   - [Do you need a service that can understand the content and meaning of images, video, or audio, or that can translate text into a different language?](#do-you-need-a-service-that-can-understand-the-content-and-meaning-of-images-video-or-audio-or-that-can-translate-text-into-a-different-language)
   - [Do you need to predict user behavior or provide users with personalized recommendations in your app?](#do-you-need-to-predict-user-behavior-or-provide-users-with-personalized-recommendations-in-your-app)
@@ -248,9 +248,9 @@
   - [Adopt the cloud](#adopt-the-cloud)
   - [Govern and manage your cloud environments](#govern-and-manage-your-cloud-environments)
   - [Create a subscription governance strategy](#create-a-subscription-governance-strategy)
-  - [Billing](#billing)
-  - [Access control](#access-control)
-  - [Subscription limits](#subscription-limits)
+    - [Billing](#billing)
+    - [Access control](#access-control)
+    - [Subscription limits](#subscription-limits)
   - [Which compliance categories are available on Azure?](#which-compliance-categories-are-available-on-azure)
   - [What's in the Microsoft Privacy Statement?](#whats-in-the-microsoft-privacy-statement)
   - [What's in the Online Services Terms?](#whats-in-the-online-services-terms)
@@ -1072,14 +1072,14 @@ IoT enables devices to gather and then relay information for data analysis. Smar
 
 By using Azure IoT services, devices that are equipped with these kinds of sensors and that can connect to the internet could send their sensor readings to a specific endpoint in Azure via a message. The message's data is then collected and aggregated, and it can be converted into reports and alerts. Alternately, all devices could be updated with new firmware to fix issues or add new functionality by sending software updates from Azure IoT services to each device.
 
-## Azure IoT Hub
+### Azure IoT Hub
 Azure IoT Hub is a managed service that's hosted in the cloud and that acts as a central message hub for bi-directional communication between your IoT application and the devices it manages. The IoT Hub service supports communications both from the device to the cloud and from the cloud to the device. From a cloud-to-device perspective, IoT Hub allows for command and control. That is, you can have either manual or automated remote control of connected devices, so you can instruct the device to open valves, set target temperatures, restart stuck devices, and so on.
 
 
-## Azure IoT Central
+### Azure IoT Central
 Azure IoT Central builds on top of IoT Hub by adding a dashboard that allows you to connect, monitor, and manage your IoT devices. You can watch the overall performance across all devices in aggregate, and you can set up alerts that send notifications when a specific device needs maintenance. To help you get up and running quickly, IoT Central provides starter templates for common scenarios across various industries, such as retail, energy, healthcare, and government. You then customize the design starter templates directly in the UI by choosing from existing themes or creating your own custom theme, setting the logo, and so on.
 
-## Azure Sphere
+### Azure Sphere
 Azure Sphere creates an end-to-end, highly secure IoT solution for customers that encompasses everything from the hardware and operating system on the device to the secure method of sending messages from the device to the message hub. Azure Sphere has built-in communication and security features for internet-connected devices.
 
 Azure Sphere comes in three parts:
@@ -1129,7 +1129,7 @@ With Azure Machine Learning, you can:
 
 Choose Azure Machine Learning when your data scientists need complete control over the design and training of an algorithm using your own data. The following video discusses the basic steps required to set up a machine learning system.
 
-## Azure Cognitive Services
+### Azure Cognitive Services
 Azure Cognitive Services provides prebuilt machine learning models that enable applications to see, hear, speak, understand, and even begin to reason. Use Azure Cognitive Services to solve general problems, such as analyzing text for emotional sentiment or analyzing images to recognize objects or faces. You don't need special machine learning or data science knowledge to use these services. Developers access Azure Cognitive Services via APIs and can easily include these features in just a few lines of code.
 
 While Azure Machine Learning requires you to bring your own data and train models over that data, Azure Cognitive Services, for the most part, provides pretrained models so that you can bring in your live data to get predictions on.
@@ -1141,7 +1141,7 @@ Azure Cognitive Services can be divided into the following categories:
 - Vision services: Add recognition and identification capabilities when you're analyzing pictures, videos, and other visual content.
 - Decision services: Add personalized recommendations for each user that automatically improve each time they're used, moderate content to monitor and remove offensive or risky content, and detect abnormalities in your time series data.
 
-## Azure Bot Service
+### Azure Bot Service
  Azure Bot Service is a bit different from Azure Machine Learning and Azure Cognitive Services in that it has a specific use case. Behind the scenes, the bot you build uses other Azure services, such as Azure Cognitive Services, to understand what their human counterparts are asking for. A bot interaction can be a quick question and answer, or it can be a sophisticated conversation that intelligently provides access to services.
 
 ## Are you building a virtual agent that interfaces with humans via natural language?
@@ -1998,7 +1998,7 @@ To implement your policy definitions, you assign definitions to resources. A pol
 Policy assignments are inherited by all child resources within that scope. If a policy is applied to a resource group, that policy is applied to all resources within that resource group. You can exclude a subscope from the policy assignment if there are specific child resources you need to be exempt from the policy assignment.
 
 ### Task 3. Review the evaluation results
-When a condition is evaluated against your existing resources, each resource is marked as compliant or noncompliant. You can review the noncompliant policy results and take any action that's needed.
+When a condition is evaluated against your existing resources, each resource is marked as compliant or noncompliant. You can review the noncompliant policy results aFnd take any action that's needed.
 
 Policy evaluation happens about once per hour. If you make changes to your policy definition and create a policy assignment, that policy is evaluated over your resources within the hour.
 
@@ -2153,17 +2153,17 @@ Teams often start their Azure governance strategy at the subscription level. The
 
 Let's look at each of these aspects in more detail.
 
-## Billing
+### Billing
 You can create one billing report per subscription. If you have multiple departments and need to do a "chargeback" of cloud costs, one possible solution is to organize subscriptions by department or by project.
 
 Resource tags can also help. You'll explore tags later in this module. When you define how many subscriptions you need and what to name them, take into account your internal billing requirements.
 
-## Access control
+### Access control
 A subscription is a deployment boundary for Azure resources. Every subscription is associated with an Azure Active Directory tenant. Each tenant provides administrators the ability to set granular access through defined roles by using Azure role-based access control.
 
 When you design your subscription architecture, consider the deployment boundary factor. For example, do you need separate subscriptions for development and for production environments? With separate subscriptions, you can control access to each one separately and isolate their resources from one another.
 
-## Subscription limits
+### Subscription limits
 Subscriptions also have some resource limitations. For example, the maximum number of network Azure ExpressRoute circuits per subscription is 10. Those limits should be considered during your design phase. If you'll need to exceed those limits, you might need to add more subscriptions. If you hit a hard limit maximum, there's no flexibility to increase it.
 
 Management groups are also available to assist with managing subscriptions. A management group manages access, policies, and compliance across multiple Azure subscriptions. You'll learn more about management groups later in this module.
