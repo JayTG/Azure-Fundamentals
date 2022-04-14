@@ -308,6 +308,9 @@
   - [Build availability requirements into your design](#build-availability-requirements-into-your-design)
   - [Include redundancy to increase availability](#include-redundancy-to-increase-availability)
   - [Very high performance is difficult to achieve](#very-high-performance-is-difficult-to-achieve)
+  - [What is the service lifecycle?](#what-is-the-service-lifecycle)
+  - [What terms and conditions can I expect?](#what-terms-and-conditions-can-i-expect)
+  - [How can I access new features for an existing service?](#how-can-i-access-new-features-for-an-existing-service)
   
 
 # Part 1: Describe core Azure concepts
@@ -2724,3 +2727,15 @@ There may be simpler ways to meet your application SLA.
 ## Very high performance is difficult to achieve
 Performance targets above 99.99 percent are very difficult to achieve. An SLA of 99.99 percent means 1 minute of downtime per week. It's difficult for humans to respond to failures quickly enough to meet SLA performance targets above 99.99 percent. Instead, your application must be able to self-diagnose and self-heal during an outage.
 
+## What is the service lifecycle?
+The service lifecycle defines how every Azure service is released for public use. Every Azure service starts in the development phase. In this phase, the Azure team collects and defines its requirements, and begins to build the service. After a new Azure service has been validated and tested, it's released to all customers as a production-ready service.
+
+## What terms and conditions can I expect?
+Each Azure preview defines its own terms and conditions. All preview-specific terms and conditions are excluded from the service level agreements and limited warranty.
+
+Some previews may not be covered by customer support, and may be subject to reduced or different security, compliance, and privacy commitments. For these reasons, previews are not recommended for business-critical workloads.
+
+## How can I access new features for an existing service?
+Some preview features relate to a specific area of an existing Azure service. For example, a compute or database service that you use daily might provide enhanced functionality. These preview features are accessible when you deploy, configure, and manage the service.
+
+Although you can use an Azure preview feature in production, make sure you're aware of any limitations before you deploy it to a production environment.
