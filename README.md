@@ -260,6 +260,12 @@
   - [What is Azure Government?](#what-is-azure-government)
   - [What is Azure China 21Vianet?](#what-is-azure-china-21vianet)
   - [Azure products and services available in China](#azure-products-and-services-available-in-china)
+- [Part 6: Describe Azure cost management and service level agreements](#part-6-describe-azure-cost-management-and-service-level-agreements)
+  - [What's the TCO Calculator?](#whats-the-tco-calculator)
+  - [How does the TCO Calculator work?](#how-does-the-tco-calculator-work)
+    - [Step 1: Define your workloads](#step-1-define-your-workloads)
+    - [Step 2: Adjust assumptions](#step-2-adjust-assumptions)
+    - [Step 3: View the report](#step-3-view-the-report)
   
 
 # Part 1: Describe core Azure concepts
@@ -2253,4 +2259,60 @@ As the first foreign public cloud service provider offered in China in complianc
 
 ## Azure products and services available in China
 The Azure services are based on the same Azure, Office 365, and Power BI technologies that make up the Microsoft global cloud service, with comparable service levels. Azure includes the core components of IaaS, PaaS, and software as a service . Azure China 21Vianet supports most of the same services that global Azure has, such as geosynchronous data replication and autoscaling.
+
+---
+
+# Part 6: Describe Azure cost management and service level agreements
+
+## What's the TCO Calculator?
+The TCO Calculator helps you estimate the cost savings of operating your solution on Azure over time, instead of in your on-premises datacenter.
+
+The term total cost of ownership is commonly used in finance. It can be hard to see all the hidden costs related to operating a technology capability on-premises. Software licenses and hardware are additional costs.
+
+With the TCO Calculator, you enter the details of your on-premises workloads. Then you review the suggested industry average cost (which you can adjust) for related operational costs. These costs include electricity, network maintenance, and IT labor. You're then presented with a side-by-side report. Using the report, you can compare those costs with the same workloads running on Azure.
+
+The following image shows one example.
+
+![2-tco-report-bar-graphs](https://user-images.githubusercontent.com/87706066/163393905-881df1eb-ed82-4946-a20c-dd66510e2678.png)
+
+## How does the TCO Calculator work?
+
+Working with the TCO Calculator involves three steps:
+
+- Define your workloads.
+- Adjust assumptions.
+- View the report.
+
+### Step 1: Define your workloads
+First, you enter the specifications of your on-premises infrastructure into the TCO Calculator, based on these four categories:
+
+- **Servers**
+>This category includes operating systems, virtualization methods, CPU cores, and memory (RAM).
+- **Databases**
+>This category includes database types, server hardware, and the Azure service you want to use, which includes the expected maximum concurrent user sign-ins.
+- **Storage**
+>This category includes storage type and capacity, which includes any backup or archive storage.
+- **Networking**
+>This category includes the amount of network bandwidth you currently consume in your on-premises environment.
+
+### Step 2: Adjust assumptions
+Next, you specify whether your current on-premises licenses are enrolled for Software Assurance, which can save you money by reusing those licenses on Azure. You also specify whether you need to replicate your storage to another Azure region for greater redundancy.
+
+Then, you can see the key operating cost assumptions across several different areas, which vary among teams and organizations. These costs have been certified by Nucleus Research, an independent research company. For example, these costs include:
+
+- Electricity price per kilowatt hour (KWh).
+- Hourly pay rate for IT administration.
+- Network maintenance cost as a percentage of network hardware and software costs.
+
+To improve the accuracy of the TCO Calculator results, you adjust the values so that they match the costs of your current on-premises infrastructure.
+
+### Step 3: View the report
+Choose a time frame between one and five years. the TCO Calculator generates a report that's based on the information you've entered. Here's an example:
+
+![2-tco-report-piecharts](https://user-images.githubusercontent.com/87706066/163393943-929de1f0-21c5-4af1-a286-a3c8a3cbc337.png)
+
+For each category (compute, datacenter, networking, storage, and IT labor), you can also view a side-by-side comparison of the cost breakdown of operating those workloads on-premises versus operating them on Azure. Here's an example:
+
+![2-tco-report-detailed-cost](https://user-images.githubusercontent.com/87706066/163393970-5e30343f-2e96-45c5-ae01-76529c5be30d.png)
+
 
