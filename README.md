@@ -298,6 +298,16 @@
   - [What's the SLA for free services?](#whats-the-sla-for-free-services)
   - [How do I know when there's an outage?](#how-do-i-know-when-theres-an-outage)
   - [How can I request a service credit from Microsoft?](#how-can-i-request-a-service-credit-from-microsoft)
+  - [Business impact](#business-impact)
+  - [Effect on other business operations](#effect-on-other-business-operations)
+  - [Usage patterns](#usage-patterns)
+  - [Identify your workloads](#identify-your-workloads)
+  - [Combine SLAs to compute the composite SLA](#combine-slas-to-compute-the-composite-sla)
+  - [What happens when the composite SLA doesn't meet your needs?](#what-happens-when-the-composite-sla-doesnt-meet-your-needs)
+    - [Choose customization options that fit your required SLA](#choose-customization-options-that-fit-your-required-sla)
+  - [Build availability requirements into your design](#build-availability-requirements-into-your-design)
+  - [Include redundancy to increase availability](#include-redundancy-to-increase-availability)
+  - [Very high performance is difficult to achieve](#very-high-performance-is-difficult-to-achieve)
   
 
 # Part 1: Describe core Azure concepts
@@ -2629,3 +2639,84 @@ From the Azure status page, you can also access Azure Service Health. This provi
 Typically, you need to file a claim with Microsoft to receive a service credit. If you purchase Azure services from a Cloud Solution Provider (CSP) partner, your CSP typically manages the claims process.
 
 Each SLA specifies the timeline by which you must submit your claim and when Microsoft processes your claim. For many services, you must submit your claim by the end of the calendar month following the month in which the incident occurred.
+
+## Business impact
+
+If the Special Orders application goes down, what would the business impact be? In this case, customers can't place new orders through the store and staff can't check the status of existing orders. Customers will either need to try again later or possibly go to a competitor.
+
+## Effect on other business operations
+The Special Orders application doesn't affect other operations. So the majority of the Tailwind Traders business will continue to function normally if the Special Orders application went down.
+
+## Usage patterns
+Usage patterns define when and how users access your application.
+
+One question to consider is whether the availability requirement differs between critical and non-critical time periods. For example, a tax-filing application can't fail during a filing deadline.
+
+## Identify your workloads
+A workload is a distinct capability or task that's logically separated from other tasks, in terms of business logic and data storage requirements. Each workload defines a set of requirements for availability, scalability, data consistency, and disaster recovery.
+
+On Azure, the Special Orders application will require:
+
+- Two virtual machines.
+- One instance of Azure SQL Database.
+- One instance of Azure Load Balancer.
+  
+Here's a diagram that shows the basic architecture:
+
+## Combine SLAs to compute the composite SLA
+After you've identified the SLA for the individual workloads in the Special Orders application, you might notice that those SLAs are not all the same. How does this affect our overall application SLA requirement of 99.9 percent? To work that out, you'll need to do some math.
+
+The process of combining SLAs helps you compute the composite SLA for a set of services. Computing the composite SLA requires that you multiply the SLA of each individual service.
+
+From Service Level Agreements, you discover the SLA for each Azure service that you need. They are:
+
+Therefore, for the Special Orders application, the composite SLA would be:
+
+---
+ 99.9% × 99.9% × 99.99% × 99.99% =
+
+ 0.999 × 0.999 × 0.9999 × 0.9999 =
+
+ 0.9978 = 99.78 %
+
+---
+Recall that you need two virtual machines. Therefore, you include the Virtual Machines SLA of 99.9 percent two times in the formula.
+
+Note that even though all of the individual services have SLAs equal to or better than the application SLA, combining them results in an overall number that's lower than the 99.9 percent you need. Why? Because using multiple services adds an extra level of complexity and slightly increases the risk of failure.
+
+You see here that the composite SLA of 99.78 percent doesn't meet the required SLA of 99.9 percent. You might go back to your team and ask whether this is acceptable. Or you might implement some other strategies into your design to improve this SLA.
+
+## What happens when the composite SLA doesn't meet your needs?
+
+### Choose customization options that fit your required SLA
+Each of the workloads defined previously has its own SLA, and the customization choices you make when you provision each workload affects that SLA. For example:
+
+- **Disks**
+
+>With Virtual Machines, you can choose from a Standard HDD Managed Disk, a Standard SSD Managed Disk, or a Premium SSD or Ultra Disk. The SLA for a single VM would be either 95 percent, 99.5 percent or 99.9 percent, depending on the disk choice.
+
+- **Tiers**
+
+>Some Azure services are offered as both a free tier product and as a standard paid service. For example, Azure Automation provides 500 minutes of job runtime in an Azure free account, but is not backed by an SLA. The standard tier SLA for Azure Automation is 99.9 percent.
+
+Make sure that your purchasing decisions take into account the impact on the SLA for the Azure services that you choose. Doing so ensures that the SLA supports your required application SLA.
+
+## Build availability requirements into your design
+So instead of adding more virtual machines, you can deploy one or more extra instances of the same virtual machine across the different availability zones in the same Azure region. An availability zone is a unique physical location within an Azure region. These zones use different schedules for maintenance, so if one zone is affected, your virtual machine instance in the other zone is unaffected.
+
+Deploying two or more instances of an Azure virtual machine across two or more availability zones raises the virtual machine SLA to 99.99 percent. Recalculating your composite SLA above with this Virtual Machines SLA gives you an application SLA of:
+
+---
+99.99% × 99.99% × 99.99% × 99.99% = 99.96%
+
+---
+This revised SLA of 99.96 percent exceeds your target of 99.9 percent.
+
+## Include redundancy to increase availability
+To ensure high availability, you might plan for your application to have duplicate components across several regions, known as redundancy. Conversely, to minimize costs during non-critical periods, you might run your application only in a single region. This redundancy includes the application itself, as well as the underlying services and infrastructure. Consider how critical high availability is to your requirements before you add redundancy.
+
+There may be simpler ways to meet your application SLA.
+
+## Very high performance is difficult to achieve
+Performance targets above 99.99 percent are very difficult to achieve. An SLA of 99.99 percent means 1 minute of downtime per week. It's difficult for humans to respond to failures quickly enough to meet SLA performance targets above 99.99 percent. Instead, your application must be able to self-diagnose and self-heal during an outage.
+
