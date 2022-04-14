@@ -2611,6 +2611,7 @@ A service credit is the percentage of the fees you paid that are credited back t
 An SLA describes how Microsoft responds when an Azure service fails to perform to its specification. For example, you might receive a discount on your Azure bill as compensation when a service fails to perform according to its SLA.
 
 Credits typically increase as uptime decreases. Here's how credits are applied for Azure Database for MySQL according to uptime:
+<img width="710" alt="Annotation 2022-04-14 143048" src="https://user-images.githubusercontent.com/87706066/163401694-4cacfe8c-75eb-4fde-83fa-1f419701fb00.png">
 
 ## What's the SLA for free services?
 Free products typically don't have an SLA.
