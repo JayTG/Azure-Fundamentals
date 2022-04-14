@@ -2273,6 +2273,8 @@ With the TCO Calculator, you enter the details of your on-premises workloads. Th
 
 The following image shows one example.
 
+![2-tco-report-bar-graphs](https://user-images.githubusercontent.com/87706066/163393905-881df1eb-ed82-4946-a20c-dd66510e2678.png)
+
 ## How does the TCO Calculator work?
 
 Working with the TCO Calculator involves three steps:
@@ -2307,4 +2309,10 @@ To improve the accuracy of the TCO Calculator results, you adjust the values so 
 ### Step 3: View the report
 Choose a time frame between one and five years. the TCO Calculator generates a report that's based on the information you've entered. Here's an example:
 
+![2-tco-report-piecharts](https://user-images.githubusercontent.com/87706066/163393943-929de1f0-21c5-4af1-a286-a3c8a3cbc337.png)
+
 For each category (compute, datacenter, networking, storage, and IT labor), you can also view a side-by-side comparison of the cost breakdown of operating those workloads on-premises versus operating them on Azure. Here's an example:
+
+![2-tco-report-detailed-cost](https://user-images.githubusercontent.com/87706066/163393970-5e30343f-2e96-45c5-ae01-76529c5be30d.png)
+
+
