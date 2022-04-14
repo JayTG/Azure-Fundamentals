@@ -2471,6 +2471,8 @@ Ideally, you want your provisioned resources to match your actual usage.
 Azure Advisor identifies unused or underutilized resources and recommends unused resources that you can remove. This information helps you configure your resources to match your actual workload.
 
 The following image shows some example recommendations from Azure Advisor:
+![6-azure-advisor](https://user-images.githubusercontent.com/87706066/163400162-6bb6c258-0aa7-4169-a778-3481d4c751eb.png)
+
 
 Recommendations are sorted by impact: high, medium, or low. In some cases, Azure Advisor can automatically remediate, or fix, the underlying problem. Other issues, such as the two that are listed as high impact, require human intervention.
 
@@ -2484,6 +2486,8 @@ Azure Reservations offers discounted prices on certain Azure services. Azure Res
 For example, you can prepay for one year or three years of use of VMs, database compute capacity, database throughput, and other Azure resources.
 
 The following example shows estimated savings on VMs. In this example, you save an estimated 72 percent by committing to a three-year term.
+![6-azure-reservations](https://user-images.githubusercontent.com/87706066/163400096-5ae42960-8a48-40f9-bd44-e4cb7d276af2.png)
+
 
 ## Choose low-cost locations and regions
 The cost of Azure products, services, and resources can vary across locations and regions. If possible, you should use them in those locations and regions where they cost less.
@@ -2498,6 +2502,7 @@ Keep up to date with the latest Azure customer and subscription offers, and swit
 Azure Cost Management + Billing is a free service that helps you understand your Azure bill, manage your account and subscriptions, monitor and control Azure spending, and optimize resource use.
 
 The following image shows current usage broken down by service:
+![6-cost-management](https://user-images.githubusercontent.com/87706066/163400029-506c3373-1fcf-4998-9cf1-bde0d415bfef.png)
 
 In this example, Azure App Service, a web application hosting service, generates the greatest cost.
 
@@ -2531,6 +2536,7 @@ For example, if you run several VMs for different teams, you can use tags to cat
 Tags make it easier to identify groups that generate the biggest Azure costs, which can help you adjust your spending accordingly.
 
 The following image shows a year's worth of usage broken down by tags on the Azure Cost Management + Billing page:
+![6-cost-management-tags](https://user-images.githubusercontent.com/87706066/163399973-e406f342-caed-46d4-95b6-39c34f21af13.png)
 
 ## Resize underutilized virtual machines
 A common recommendation that you'll find from Azure Cost Management + Billing and Azure Advisor is to resize or shut down VMs that are underutilized or idle.
