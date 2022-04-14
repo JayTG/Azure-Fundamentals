@@ -2663,12 +2663,16 @@ On Azure, the Special Orders application will require:
   
 Here's a diagram that shows the basic architecture:
 
+<img width="716" alt="Annotation 2022-04-14 143642" src="https://user-images.githubusercontent.com/87706066/163404353-a7ab0288-ef5f-401d-8fb5-20afbc009cf4.png">
+
 ## Combine SLAs to compute the composite SLA
 After you've identified the SLA for the individual workloads in the Special Orders application, you might notice that those SLAs are not all the same. How does this affect our overall application SLA requirement of 99.9 percent? To work that out, you'll need to do some math.
 
 The process of combining SLAs helps you compute the composite SLA for a set of services. Computing the composite SLA requires that you multiply the SLA of each individual service.
 
 From Service Level Agreements, you discover the SLA for each Azure service that you need. They are:
+
+<img width="713" alt="Annotation 2022-04-14 143747" src="https://user-images.githubusercontent.com/87706066/163404403-d5739d61-e71d-4f4e-a60a-97e18de7807b.png">
 
 Therefore, for the Special Orders application, the composite SLA would be:
 
